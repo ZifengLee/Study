@@ -1,52 +1,45 @@
 var a = 1;
 var b = 1;
 var pos = [];
-pos[a] = [];
+pos[1] = [];
 var result = [];
-result[a] = [];
+result[1] = [];
 
-document.getElementById("tishi").innerHTML =
-    "请输入数组第" + a + "行第" + b + "列的值";
-
-document.getElementById("btn1").addEventListener("click", huoqu);
-
-document.getElementById("btn2").addEventListener("click", yunSuan);
+function tiShi() {
+    let ID = "tishi";
+    document.getElementById(ID).innerHTML =
+        "请输入数组第" + a + "行第" + b + "列的值";
+}
 
 function huoqu() {
     var szvalue = document.getElementById("sValue");
     if (a <= 3) {
         if (b <= 4) {
-            pos[a][b] = szvalue.value;
-            console.log(szvalue.value);
+            pos[a][b] = parseInt(szvalue.value);
             b++;
-        } else {
-            a++;
-            b = 1;
-            pos[a][b] = szvalue.value;
-            b++;
+            if (b > 4) {
+                a++;
+                if (a > 3) {
+                    // a=4 b=5
+                    return;
+                }
+                pos[a] = [];
+                b = 1;
+            }
+            tiShi();
         }
-        console.log(pos);
-        console.log(pos[0]);
-        console.log(pos[1]);
-        console.log(pos[1][1]);
-        console.log(pos[1][2]);
-        console.log(pos[2]);
-        console.log(pos[3]);
-        console.log(a);
-        console.log(b);
-    } else {
-        return;
     }
-    tiShi();
-}
-
-function tiShi() {
-    document.getElementById("tishi").innerHTML =
-        "请输入数组第" + a + "行第" + b + "列的值";
+    // console.log(pos);
+    console.log(pos[1]);
+    console.log(pos[2]);
+    console.log(pos[3]);
 }
 
 function yunSuan() {
     for (a = 1; a <= 3; a++) {
+        result[a] = [];
+        result[a][1] = 0;
+        result[a][2] = 0;
         for (b = 1; b <= 4; b++) {
             if (pos[a][b] < 0) {
                 result[a][1] += pos[a][b];
@@ -55,14 +48,26 @@ function yunSuan() {
             }
         }
     }
+    console.log(pos);
+    console.log(result);
     xianshires();
 }
 
 function xianshires() {
-    document.getElementById("result1").innerHTML =
-        "第一行：正数和：" + result[1][2] + ",负数和：" + result[1][1];
-    document.getElementById("result2").innerHTML =
-        "第二行：正数和：" + result[2][2] + ",负数和：" + result[2][1];
-    document.getElementById("result3").innerHTML =
-        "第三行：正数和：" + result[3][2] + ",负数和：" + result[3][1];
+    for (a = 1; a <= 3; a++) {
+        let res = "result" + a;
+        document.getElementById(res).innerHTML =
+            "第" +
+            a +
+            "行：正数和：" +
+            result[a][2] +
+            ",负数和：" +
+            result[a][1];
+    }
 }
+
+tiShi();
+
+document.getElementById("btn1").addEventListener("click", huoqu);
+
+document.getElementById("btn2").addEventListener("click", yunSuan);
