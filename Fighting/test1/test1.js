@@ -40,8 +40,8 @@ function tiShi() {
 }
 
 function yunSuan() {
-    for (let a = 1; a <= 3; a++) {
-        for (let b = 1; b <= 4; b++) {
+    for (a = 1; a <= 3; a++) {
+        for (b = 1; b <= 4; b++) {
             if (pos[a][b] < 0) {
                 result[a][1] += pos[a][b];
             } else {
