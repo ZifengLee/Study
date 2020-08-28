@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+
+        <title>title</title>
+        <link rel="stylesheet" href="test2.css" />
+    </head>
+
+    <body>
+        <div id="app1">
+            <div
+                id="app"
+                class="static"
+                v-bind:class="{ 'active': isActive, 'text-danger': hasError }"
+            >
+                <input type="text" v-model="message" />
+                <button v-on:click="greet">Greet</button>
+            </div>
+        </div>
+        <script src="../vue.min.js"></script>
+        <script src="test2.js"></script>
+    </body>
+</html>
