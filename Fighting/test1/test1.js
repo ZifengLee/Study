@@ -13,7 +13,7 @@ document.getElementById("btn1").addEventListener("click", huoqu);
 document.getElementById("btn2").addEventListener("click", yunSuan);
 
 function huoqu() {
-    let szvalue = document.getElementById("sValue");
+    var szvalue = document.getElementById("sValue");
     if (a <= 3) {
         if (b <= 4) {
             pos[a][b] = szvalue.value;
@@ -26,6 +26,12 @@ function huoqu() {
             b++;
         }
         console.log(pos);
+        console.log(pos[0]);
+        console.log(pos[1]);
+        console.log(pos[1][1]);
+        console.log(pos[1][2]);
+        console.log(pos[2]);
+        console.log(pos[3]);
         console.log(a);
         console.log(b);
     } else {
