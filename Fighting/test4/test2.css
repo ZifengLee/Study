@@ -1,0 +1,12 @@
+body {
+    width: 200px;
+    height: 200px;
+}
+.active {
+    width: 100px;
+    height: 100px;
+    background: green;
+}
+.text-danger {
+    background: red;
+}
