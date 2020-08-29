@@ -2,7 +2,7 @@ var Scores;
 function piPei() {
     let Number = document.getElementById("Score").value;
     let dengji = parseInt(Number / 10);
-    // 方法一switch
+    // 方法一switch1
     switch (dengji) {
         case 10:
         case 9:
