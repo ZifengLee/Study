@@ -1,6 +1,6 @@
 var Chengyu;
-function piPei() {
-    let Number = document.getElementById("Num").value;
+function piPei(evt) {
+    let Number = document.getElementById("Num").style.b;
     switch (parseInt(Number)) {
         case 1:
             Chengyu = "一生一世";
@@ -28,5 +28,7 @@ function piPei() {
     }
     document.getElementById("result").innerHTML = Chengyu;
 }
-
+piPei({
+    id: "test",
+});
 document.getElementById("btn").addEventListener("click", piPei);
