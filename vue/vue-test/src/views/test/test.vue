@@ -54,7 +54,7 @@ export default {
   }
 };
 </script>
-<style scoped>
+<style lang="scss" scoped>
 #all {
   margin: 0px auto;
   display: flex;
