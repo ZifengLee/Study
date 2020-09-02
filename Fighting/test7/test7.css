@@ -1,0 +1,15 @@
+body {
+    width: 800px;
+    height: 800px;
+}
+
+#hang {
+    width: 600px;
+    height: 400px;
+}
+
+#gezi {
+    width: 20px;
+    height: 20px;
+    border: 1px solid gray;
+}

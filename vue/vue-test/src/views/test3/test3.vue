@@ -1,5 +1,5 @@
 <template>
-    <div>当前页面：{{ pagename }}</div>
+    <div>test2</div>
 </template>
 
 <script>
@@ -7,15 +7,14 @@ export default {
     name: "home",
     data() {
         return {
-            pagename: "PAGE2"
+
         };
     },
-    methods: {}
+    methods: {
+
+
+    }
 };
 </script>
 <style lang="scss" scoped>
-div {
-    margin: 0px auto;
-    text-align: center;
-}
 </style>

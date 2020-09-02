@@ -48,14 +48,19 @@ Vue.use(Router);
 
 const routes = [
   {
-    path: "/", //这个是主页 网站的默认目录要有一个page；
+    path: "/",
     name: "test1",
     component: () => import("@/views/test1/test1.vue")
   },
   {
-    path: "/test2",
+    path: "/test2", //这个是主页 网站的默认目录要有一个page；
     name: "test2",
-    component: () => import("@/views/test2/index.vue")
+    component: () => import("@/views/test2/test2.vue")
+  },
+  {
+    path: "/test3",
+    name: "test3",
+    component: () => import("@/views/test3/test3.vue")
   },
   {
     path: "/page2",
@@ -66,11 +71,6 @@ const routes = [
     path: "/page3",
     name: "page3",
     component: () => import("@/views/page3/page3.vue")
-  },
-  {
-    path: "/test",
-    name: "test",
-    component: () => import("@/views/test/test.vue")
   }
 ];
 
