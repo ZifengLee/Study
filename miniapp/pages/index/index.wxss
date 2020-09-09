@@ -1,4 +1,4 @@
-/**index.wxss**/
+/**index.wxss2344**/
 .userinfo {
   display: flex;
   flex-direction: column;
