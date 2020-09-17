@@ -1,22 +1,42 @@
 
-/**index.wxss23442226**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* 搜索栏样式 */
+.search {
+	width: 100%;
+	height: 80rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 12px;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.searchView {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 96%;
+	height: 70rpx;
+	border: 1rpx solid #039BFF;
+	border-radius: 45rpx;
+	color: #c4c2c2;
+	font-size: 30rpx;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.searchView>image {
+	width: 50rpx;
+	height: 45rpx;
+	margin-left: 20rpx;
 }
 
-.usermotto {
-  margin-top: 200px;
+.user-search {
+	width: 100%;
+	margin-left: 20rpx;
+	font-size: 30rpx;
+}
+
+.searchView>text {
+	width: 120rpx;
+	border-left: 4rpx solid #039BFF;
+	color: #039BFF;
+	padding-left: 10px;
+
 }
