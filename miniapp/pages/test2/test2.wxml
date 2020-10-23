@@ -1,0 +1,14 @@
+<view class="row" catchtap="gophone">
+				<view>
+								<image src="../../images/kefu.png"></image>
+								<view>联系客服</view>
+				</view>
+				<image src="../../images/qianwang.svg"></image>
+</view>
+<!-- 联系我们弹窗及遮罩层 -->
+<view class="zhezhaocehng" wx:if="{{isshow}}" catchtap="colse"></view>
+<view class="phone" wx:if="{{isshow}}">
+				<text>联系客服</text>
+				<text>{{phone}}</text>
+				<text catchtap="gophone">拨打电话</text>
+</view>

@@ -1,0 +1,98 @@
+<!-- 图片及简介 -->
+<view class="top">
+	<image class="detail_img" src="{{ imgBaseUrl + goodsContent.image }}"></image>
+	<view class="detail_content">
+		<view class="detail_price">
+			<text class="newPrice">￥{{goodsContent.actual_price}}</text>
+			<text class="oldPrice">￥{{goodsContent.bid_price}}</text>
+		</view>
+		<view class="detail_bottom">
+			<view class="detail_title">{{goodsContent.name}}</view>
+			<view class="detail_weight">
+				<text>库存{{goodsContent.number}}件</text>
+				<text>{{goodsContent.specification + goodsContent.unit}}*1</text>
+			</view>
+		</view>
+	</view>
+</view>
+<!-- 图片及简介结束 -->
+<!-- 商品详情开始 -->
+<view class="content">
+	<image src="{{ imgBaseUrl + goodsContent.image }}" style="width:100%;height:1000rpx;"></image>
+</view>
+<!-- 商品详情开始结束 -->
+<!-- 购买按钮 -->
+<view class="buy_btn">
+	<button type="warn" bindtap="buy">
+		<view>￥{{goodsContent.actual_price}}</view>
+		<view>加入购物车</view>
+	</button>
+	<button type="warn" bindtap="buyHalf">
+		<view>￥{{ goodsContent.actual_price / 2 }}</view>
+		<view>抢半价购买</view>
+	</button>
+</view>
+<!-- 购买界面及加入购物车页面 -->
+<view class="msk" bindtap="close" wx:if="{{isShow}}"></view>
+<view class="shopCart" wx:if="{{isShow}}">
+	<view class="close" bindtap="close">×</view>
+
+	<view wx:if="{{isopen}}">
+		<view class="title">
+			<image src="{{ imgBaseUrl + showImage }}"></image>
+			<view>
+				<view>{{goodsContent.name}}</view>
+				<view>￥{{showPrice}}</view>
+			</view>
+		</view>
+
+		<view class="goods_guige">
+			<view>{{oneName}}</view>
+			<view class="guige">
+				<view class="guige_item {{item.isEnable1 ? 'active' : 'bind'}} {{ specActive == index ? 'seleted' : '' }} " wx:for="{{goodsContent.one}}" wx:key="key" catchtap="OneSelectSpecOne" data-oneName="{{item.style}}" data-index="{{index}}">{{item.style}}</view>
+			</view>
+		</view>
+
+		<view class="goods_style">
+			<view>{{towName}}</view>
+			<view class="style">
+				<view class="style_item {{item.isEnable2 ? 'active' : 'bind'}} {{ specActive2 == index ? 'seleted' : '' }} " wx:for="{{goodsContent.two}}" wx:key="key" catchtap="OneSelectSpecTwo"  data-twoName="{{item.specification}}" data-index="{{index}}">{{item.specification}}</view>
+			</view>
+		</view>
+
+		<view class="buyNum">
+			<text>购买数量</text>
+			<view>
+				<button catchtap="sub">-</button>
+				<input type="number" value="{{number}}"></input>
+				<button catchtap="add">+</button>
+			</view>
+		</view>
+	</view>
+
+	<view wx:else>
+
+		<view class="title">
+			<image src="{{ imgBaseUrl + goodsContent.image }}"></image>
+			<view>
+				<view>{{goodsContent.name}}</view>
+				<view>￥{{goodsContent.actual_price}}</view>
+			</view>
+		</view>
+
+		<view class="buyNum">
+			<text>购买数量</text>
+			<view>
+				<button catchtap="sub">-</button>
+				<input type="number" value="{{number}}"></input>
+				<button catchtap="add">+</button>
+			</view>
+		</view>
+
+	</view>
+
+	<view class="btn">
+		<button type="warn" catchtap="joinCart">加入购物车</button>
+	</view>
+
+</view>

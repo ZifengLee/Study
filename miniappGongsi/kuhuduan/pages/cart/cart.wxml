@@ -1,0 +1,43 @@
+<view class="container carts-list">
+	<view wx:for="{{carts}}" data-index="{{index}}" wx:key="key" style="width:100%;display:flex;">
+
+		<view class="carts-item">
+			<!-- 复选框图标 -->
+			<icon wx:if="{{item.selected}}" type="success_circle" size="20" bindtap="bindCheckbox" data-index="{{index}}" />
+			<icon wx:else type="circle" size="20" bindtap="bindCheckbox" data-index="{{index}}" />
+			<!-- 图片 -->
+			<view>
+				<image class="carts-image" src="{{ imgBaseUrl + item.image }}" mode="aspectFill" />
+			</view>
+			<!-- 标题 -->
+			<view class="carts-text">
+				<text class="carts-title">{{item.name}}</text>
+				<view class="carts-subtitle">
+					<text class="carts-price">{{item.actual_price}}</text>
+					<view class="stepper">
+						<!-- 减号 -->
+						<text data-index="{{index}}" catchtap="bindMinus">-</text>
+						<!-- 数值 -->
+						<input type="number" value="{{item.number}}" />
+						<!-- 加号 -->
+						<text data-index="{{index}}" catchtap="bindPlus">+</text>
+					</view>
+				</view>
+			</view>
+		</view>
+
+		<!-- 删除按钮 -->
+		<view class="del" data-index="{{index}}" catchtap="del"></view>
+
+	</view>
+</view>
+<!-- 底部全选结算区域 -->
+<view class="carts-footer">
+	<view bindtap="bindSelectAll">
+		<icon wx:if="{{selectedAllStatus}}" type="success_circle" size="20" />
+		<icon wx:else type="circle" size="20" />
+		<text>全选</text>
+	</view>
+	<text>{{total}}</text>
+	<view class="button" catchtap="bindCheckout">立即下单</view>
+</view>

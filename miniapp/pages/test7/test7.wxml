@@ -1,0 +1,10 @@
+	<view wx:for="{{addressList}}" data-index="{{index}}" wx:key="key" style="width:100%;position:relative;">
+
+		<!-- 上面内容 -->
+		<view class="carts-item" style="{{item.txtStyle}}" data-index="{{index}}" bindtouchstart='touchstart' bindtouchmove='touchmove' bindtouchend='touchend'>
+		{{item.name}}
+		</view>
+
+		<!-- 删除按钮 -->
+		<view class="del" data-index="{{index}}" catchtap="del" style="color:white;">删除</view>
+	</view>

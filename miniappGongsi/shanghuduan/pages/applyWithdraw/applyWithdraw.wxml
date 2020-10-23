@@ -1,0 +1,44 @@
+<view>
+	<view class="stores_detail">
+		<view class="fs30">待提现积分</view>
+		<view class="fs40">{{unWithdraw}}</view>
+	</view>
+	<!-- <view class="integra1_detail" style=" border: 1rpx solid #039BFF;">
+		<view class="withdrawNum">提现数量</view>
+		<input style="text-align: right;margin-right: 40rpx;" placeholder="请输入提现数量" bindinput="setInput" value="{{inputValue}}"></input>
+	</view> -->
+	<view class="integra1_detail" style=" border: 1rpx solid #039BFF;">
+		<view class="withdrawNum">提现数量</view>
+		<view class="input">
+		<input style="text-align: right;" placeholder="1" bindinput="setInput" value="{{inputValue}}"></input>
+		<span>{{number}}</span>
+		</view>
+	</view>
+	<view style="margin-left: 40rpx;color: #A2A2A2;">提现最小金额为 10000 元整！</view>
+	<view class="submit">
+		<view class="btn" bindtap='showMask'>确认提现</view>
+	</view>
+</view>
+<!-- 遮罩层 -->
+<view class="mask" hidden="{{flag}}" style="width:100%;height:100%; background-color: #EFEFEF;">
+	<view class="tishiContant">
+		<view class="tishiContant1">
+			<view class="tishiTop">
+				<view class="queding_img">
+					<image src='../../images/chenggong.png' />
+				</view>
+				<view class="tishiType">积分提现申请提交成功</view>
+				<view class="tishi">提现后24小时内到账，若未及时到账请联系客服人员</view>
+			</view>
+			<view class="integra1_detail">
+				<view class="goods_detail">
+					<view class="allIntegra1">积分提现总额</view>
+				</view>
+				<view class="Integra1">{{inputValue}}</view>
+			</view>
+		</view>
+	</view>
+	<view class="submit">
+		<button bindtap="goToWithdraw" style="width:640rpx; font-weight: 100;">返回({{time}})</button>
+	</view>
+</view>

@@ -1,0 +1,58 @@
+<view class="container">
+    <!-- 订单类型 -->
+    <view class="fenlei">
+        <view style="margin-top: 40rpx;">我的订单</view>
+        <view class="fenlei_content">
+            <view catchtap="getList" data-value="120">
+                <image src="../../images/daifukuan.png"></image>
+                <view>待付款</view>
+            </view>
+            <view catchtap="getList" data-value="121">
+                <image src="../../images/yifukuan.png"></image>
+                <text>已付款</text>
+            </view>
+            <view catchtap="getList" data-value="122">
+                <image src="../../images/daishouhuo.png"></image>
+                <text>待收货</text>
+            </view>
+            <view catchtap="getList" data-value="124">
+                <image src="../../images/yiwancheng.png"></image>
+                <text>已完成</text>
+            </view>
+        </view>
+    </view>
+    <!-- 订单列表 -->
+    <scroll-view class="height100" scroll-y="true" bindscrolltoupper="scrollToUpper" bindscrolltolower="scrollToLower">
+        <view class="order_item" wx:for="{{orderList}}" wx:key="key">
+            <view class="order_title">
+                <view class="order_flag">{{item.flag}}</view>
+            </view>
+            <view class="order_img">
+                <view>
+                    <view wx:for="{{item.commodity}}" wx:key="key">
+                        <image class="img" wx:if="{{index < 3}}" src="{{imgBaseUrl + item.image}}"></image>
+                        <image class="img" wx:if="{{index === 3}}" src="../../image/hasMore.png"></image>
+                    </view>
+                </view>
+                <text style="margin-right:20rpx;">共{{item.count}}件</text>
+            </view>
+            <view class="order_price">
+                <text>实付款￥{{item.actually_amount}}</text>
+            </view>
+            <view class="btn" wx:if="{{flagValue==120}}">
+                <button type="warn" size="mini" plain catchtap="closeOrder" data-id="{{item.id}}">
+                    取消订单
+                </button>
+                <button type="warn" size="mini" catchtap="changeOrder" data-id="{{item.id}}">
+                    去支付
+                </button>
+            </view>
+            <view class="btn" wx:if="{{flagValue==122}}">
+                <button type="warn" size="mini" catchtap="confirmOrder" data-id="{{item.id}}">
+                    确认收货
+                </button>
+            </view>
+        </view>
+        <view class="loadmore">没有更多内容了</view>
+    </scroll-view>
+</view>

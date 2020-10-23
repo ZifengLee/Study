@@ -1,0 +1,39 @@
+.zitidian {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1rpx solid rgb(206, 206, 206);
+    box-sizing: border-box;
+    padding: 20rpx 40rpx;
+}
+
+.zitidian > view:first-child {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24rpx;
+    font-size: 34rpx;
+}
+
+.zitidian > view:nth-child(2) {
+    width: 100%;
+    padding-bottom: 20rpx;
+    border-bottom: 1rpx solid rgb(206, 206, 206);
+    font-size: 26rpx;
+    color: #949494;
+}
+
+.zitidian > view:last-child {
+    width: 100%;
+    margin: 20rpx 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 26rpx;
+}
+
+.zitidian > view:last-child > view {
+    display: flex;
+    align-items: center;
+}

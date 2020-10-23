@@ -1,0 +1,146 @@
+.top {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    height: 375rpx;
+    margin-bottom: 30rpx;
+}
+
+.avatar {
+    width: 140rpx;
+    height: 140rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 40rpx;
+}
+
+.avatar > image {
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+}
+
+.title {
+    background-color: red;
+    height: 300rpx;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.name_phone {
+    color: #fff;
+    margin: 20rpx 0 0 40rpx;
+}
+
+.name_phone > view:last-child {
+    margin-top: 30rpx;
+}
+
+.jifenbankuai {
+    width: 80%;
+    height: 150rpx;
+    background-color: #fff;
+    border-radius: 20rpx;
+    position: absolute;
+    bottom: 0rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: red;
+    box-sizing: border-box;
+    padding: 0 30rpx;
+}
+
+.jifenbankuai > view:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.border {
+    width: 80%;
+    height: 75rpx;
+    position: absolute;
+    bottom: 0rpx;
+    border-bottom-left-radius: 20rpx;
+    border-bottom-right-radius: 20rpx;
+    z-index: -1;
+    box-shadow: 10rpx 0 8rpx -8rpx rgb(211, 211, 211),
+        -6px 0 5px -5px rgb(211, 211, 211), 0px 6px 5px -5px rgb(211, 211, 211);
+}
+
+.zitidian {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.zitidian_content {
+    width: 90%;
+    height: 172rpx;
+    background-color: #f3f3f3;
+    padding-left: 30rpx;
+}
+
+.zitidian_content > view:first-child {
+    font-size: 34rpx;
+    font-weight: 547;
+    margin-bottom: 15rpx;
+    margin-top: 20rpx;
+}
+
+.zitidian_content > view:not(:first-child) {
+    color: #949494;
+    font-size: 28rpx;
+    margin-bottom: 6rpx;
+}
+
+.line {
+    width: 100%;
+    height: 20rpx;
+    background-color: #f3f3f3;
+    margin: 20rpx 0;
+}
+
+.row {
+    width: 90%;
+    height: 60rpx;
+    padding-bottom: 30rpx;
+    margin-bottom: 30rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    border-bottom: 1rpx solid rgb(175, 175, 175);
+    color: #333;
+    font-size: 30rpx;
+}
+
+.row > view {
+    display: flex;
+}
+
+.row > view > image {
+    width: 40rpx;
+    height: 40rpx;
+    padding-right: 16rpx;
+}
+
+.row > image {
+    width: 28rpx;
+    height: 28rpx;
+}
+
+.operate {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.operate > view {
+    padding-bottom: 30rpx;
+}

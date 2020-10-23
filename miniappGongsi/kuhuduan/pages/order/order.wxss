@@ -1,0 +1,120 @@
+.fenlei {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+
+.fenlei_content {
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    margin-top: 30rpx;
+}
+
+.fenlei_content > view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fenlei_content > view > image {
+    width: 70rpx;
+    height: 70rpx;
+}
+
+.order_item {
+    width: 90%;
+    margin: 20rpx auto;
+    box-shadow: 8rpx 8rpx 15rpx 1rpx #fff2f2 inset, 8rpx 8rpx 15rpx 1rpx #fff2f2;
+}
+
+/* .order_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 20rpx 20rpx;
+  font-size: 28rpx;
+}
+
+.order_title > text:first-child {
+  color: #fcdfdf;
+}
+
+.order_title > text:last-child {
+  color: red;
+} */
+
+.order_title {
+    position: relative;
+    height: 60rpx;
+}
+
+.order_flag {
+    position: absolute;
+    right: 20rpx;
+top: 20rpx;
+color: red;
+}
+.order_img {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* color: #fcdfdf; */
+    font-size: 26rpx;
+}
+.order_img > view {
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 30rpx;
+}
+.order_img .img {
+    flex: 1;
+    width: 90rpx;
+    height: 90rpx;
+    border-radius: 50%;
+    box-shadow: 8rpx 8rpx 10rpx 3rpx #9e9e9e;
+    margin: 0 30rpx;
+}
+.order_price {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 50rpx 0 10rpx 0;
+    box-sizing: border-box;
+    padding-right: 30rpx;
+    color: red;
+}
+.btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.btn > button {
+    margin: 20rpx;
+    border-radius: 50rpx;
+}
+
+.height100 {
+    width: 100%;
+    flex: 8;
+    height: 0;
+}
+
+.page-section-spacing {
+    margin-top: 60rpx;
+}
+.scroll-view_H {
+    white-space: nowrap;
+}
+.scroll-view-item {
+    height: 300rpx;
+}
+.scroll-view-item_H {
+    display: inline-block;
+    width: 100%;
+    height: 300rpx;
+}

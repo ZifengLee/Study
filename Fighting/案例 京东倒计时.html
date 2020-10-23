@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                margin: 60px 80px;
+            }
+            div {
+                width: 190px;
+                margin: 60px 80px;
+                margin: 60px 80px;
+            }
+            span {
+                background-color: #000;
+                color: #fff;
+                line-height: 30px;
+                border: 1px solid #000;
+                text-align: center;
+                padding: 10px 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <span class="hour"></span>
+            <span class="minute"></span>
+            <span class="second"></span>
+        </div>
+
+        <script>
+            // 1. 获取元素
+            var hour = document.querySelector(".hour");
+            var minute = document.querySelector(".minute");
+            var second = document.querySelector(".second");
+            var inputTime = +new Date("2020-09-21 15:00:00"); // 返回的是用户输入时间总的毫秒数
+            countDown(); // 我们先调用一次这个函数，防止第一次刷新页面有空白
+            // 2. 开启定时器
+            setInterval(countDown, 1000);
+            function countDown() {
+                var nowTime = +new Date(); // 返回当前时间总的毫秒数
+
+                var times = (inputTime - nowTime) / 1000; // times 是剩余时间总的秒数
+                var hours = parseInt((times / 60 / 60) % 24);
+                hours = hours < 10 ? "0" + hours : hours;
+                hour.innerHTML = hours; // 把剩余的小时 给小时的黑色盒子
+                var minutes = parseInt((times / 60) % 60);
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                minute.innerHTML = minutes; // 把剩余的分钟 给分钟的黑色盒子
+                var seconds = parseInt(times % 60);
+                seconds = seconds < 10 ? "0 " + seconds : seconds;
+                second.innerHTML = seconds;
+            }
+        </script>
+    </body>
+</html>

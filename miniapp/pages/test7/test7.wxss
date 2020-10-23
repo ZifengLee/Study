@@ -1,0 +1,24 @@
+/*每行单元格*/
+.carts-item {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  background-color: pink;
+  line-height: 70rpx;
+  position: relative;
+  height: 200rpx;
+}
+
+.del {
+  background-color: red;
+  text-align: center;
+  line-height: 200rpx;
+  padding-right: 20rpx;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  padding-left: 20rpx;
+  width: 160rpx;
+}

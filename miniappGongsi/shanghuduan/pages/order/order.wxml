@@ -1,0 +1,66 @@
+<view class="contain1">
+	<!-- 搜索区域 -->
+	<view class="search">
+		<view class="searchView">
+			<image bindtap="search" src="../../images/sousuo.png" />
+			<view class="user-search">
+				<input style="width:100%;font-size: 30rpx;" focus type="text" value="{{inputValue}}" confirm-type="search" bindconfirm="search" placeholder="请输入用户名、电话进行搜索" bindinput="searchContent" />
+			</view>
+		</view>
+	</view>
+	<!-- 订单列表 -->
+	<view id="scroll">
+		<scroll-view scroll-y="true" style="height:91%;position: absolute;" bindscrolltolower="scrolltolower" wx:if="{{orderList.length!==0}}">
+			<view class="contain2">
+				<view class="orderList colorGray" wx:for="{{orderList}}" wx:key="id">
+					<view class="title">
+						<view class="orderNum btn plr " style="width:50rpx">0{{index+1}}</view>
+						<view class="state colorR fs36">{{item.flag}}</view>
+					</view>
+					<view class="personDetail">
+						<view class="personDetail1">
+							<view class="personName fs38 mb10">
+								<view class="name pb10 pt10">{{item.name}}</view>
+								<view class="phone pb10 pt10">{{item.mobile_phone}}</view>
+							</view>
+							<view class="fs32">{{item.address}}</view>
+						</view>
+						<image class="btn call" bindtap="WePhone" src='../../images/dianhua.png' />
+					</view>
+					<view class="orderDetail fs32" bindtap="goToOrderDetail" data-index="{{index+1}}" data-id="{{item.id}}">
+						<view class="pb10 pt10">下单时间：{{item.create_time}}</view>
+						<view class="orderNum pb10 pt10">
+							<view>下单编号：{{item.code}}</view>
+							<image class="call" src='../../images/jiantou1.png' />
+						</view>
+						<view class="pb10 pt10">
+							下单总额：
+							<span class="colorR">{{item.actually_amount}}元</span>
+						</view>
+					</view>
+					<view class="confirm" wx:if="{{item.flag!=='已完成'}}">
+						<!-- <view class="btn plr ptb1" bindtap="goToConfirm" data-id="{{item.id}}">
+							确认自提
+						</view> -->
+						<view class="btn plr ptb1" catchtap='showMask' data-id="{{item.id}}">
+							确认自提
+						</view>
+					</view>
+				</view>
+			</view>
+		</scroll-view>
+		<view class="noOrder" wx:else>没有搜索到相关订单哦~</view>
+	</view>
+</view>
+
+<!-- 确认自提遮罩层 -->
+<view class="mask" hidden="{{flag}}">
+	<view class="bgc">
+		<view class="center" style="font-size: 36rpx;padding-bottom: 20rpx;border-bottom: 1rpx solid black;">温馨提示</view>
+		<view class="center">是否确认此订单客户自提成功！</view>
+		<view class="button">
+			<view bindtap="closeMask" style="border-right: 1rpx solid black;">取消</view>
+			<view bindtap="goToConfirm">确认</view>
+		</view>
+	</view>
+</view>

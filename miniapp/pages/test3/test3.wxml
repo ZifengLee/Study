@@ -1,0 +1,38 @@
+<view style="position:relative;">
+<view style="position:absolute;right: calc((100% - 80rpx) / 2);top: -20rpx;z-index: 100;">
+<image class="photo" src='../../images/sanjiao.png' />
+</view>
+<view id="rotate" class="index" bindtap="zhuanin" style="transform:rotate({{trasn}}deg);">
+  <view class="xian"></view>
+  <view class="xian"></view>
+  <view class="xian"></view>
+  <view class="xian"></view>
+  <view class="detail" style="transform: rotate(-22.50deg);">
+ <view>一等奖</view>
+  <image style="width: 60rpx;height: 60rpx;margin-bottom: 16rpx;" src="../../images/lucky/GoldCoin.png" />
+  </view>
+  <view class="detail" style="transform: rotate(22.5deg);" >
+  <view>二等奖</view>
+<image style="width: 60rpx;height: 60rpx;margin-bottom: 16rpx;" src="../../images/lucky/GoldCoin.png" />
+  </view>
+  <view class="detail" style="transform: rotate(67.5deg);">
+   <view>三等奖</view>
+<image style="width: 60rpx;height: 60rpx;margin-bottom: 16rpx;" src="../../images/lucky/GoldCoin.png" /></view>
+  <view class="detail" style="transform: rotate(112.5deg);">
+  <view>四等奖</view>
+<image style="width: 60rpx;height: 60rpx;margin-bottom: 16rpx;" src="../../images/lucky/GoldCoin.png" /></view>
+  <view class="detail" style="transform: rotate(157.5deg);">
+  <view>五等奖</view>
+<image style="width: 60rpx;height: 60rpx;margin-bottom: 16rpx;" src="../../images/lucky/GoldCoin.png" /></view>
+  <view class="detail" style="transform: rotate(202.5deg);">
+  <view>六等奖</view>
+<image style="width: 60rpx;height: 60rpx;margin-bottom: 16rpx;" src="../../images/lucky/GoldCoin.png" /></view>
+  <view class="detail" style="transform: rotate(247.5deg);">
+  <view>七等奖</view>
+<image style="width: 60rpx;height: 60rpx;margin-bottom: 16rpx;" src="../../images/lucky/GoldCoin.png" /></view>
+  <view class="detail" style="transform: rotate(292.5deg);">
+  <view>八等奖</view>
+<image style="width: 60rpx;height: 60rpx;margin-bottom: 16rpx;" src="../../images/lucky/GoldCoin.png" /></view>
+</view>
+</view>
+<image class="beijing" style="width: 100%;" mode="widthFix" src="../../images/lucky/beijing.png" />

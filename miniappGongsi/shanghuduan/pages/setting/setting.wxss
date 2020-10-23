@@ -1,0 +1,68 @@
+body {
+    height: 100%;
+}
+
+.main {
+    height: 100%;
+    position: relative;
+    padding: 0 40rpx;
+}
+
+/* 内容块 */
+.contain .touxiang {
+    display: flex;
+    align-items: center;
+    /* font-size: 38rpx; */
+    border-bottom: 2rpx solid #eee;
+    padding: 8rpx 0;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.contain .touxiang view {
+    font-size: 40rpx;
+    color: #333333;
+}
+
+.contain .detail {
+    display: flex;
+    align-items: center;
+    font-size: 38rpx;
+    border-bottom: 2rpx solid #eee;
+    padding: 30rpx 0;
+    width: 100%;
+}
+
+.contain .detail view {
+    font-size: 36rpx;
+    padding-right: 20rpx;
+}
+
+
+.people_img {
+    width: 180rpx;
+    height: 180rpx;
+}
+
+.people_img image {
+    width: 100%;
+    height: 100%;
+    border-radius: 90rpx;
+}
+
+.detail image {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+/* 吸底 */
+.tishi {
+    position: fixed;
+    /* z-index: 100; */
+    bottom: 16rpx;
+    /* left: 0; */
+    width: 100%;
+    text-align: center;
+    color: #53A9FF;
+    font-size: 30rpx;
+}

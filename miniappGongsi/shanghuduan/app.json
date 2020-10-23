@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/order/order",
+    "pages/orderDetail/orderDetail",
+    "pages/my/my",
+    "pages/setting/setting",
+    "pages/changePassword/changePassword",
+    "pages/scanWithdraw/scanWithdraw",
+    "pages/prizeWithdraw/prizeWithdraw",
+    "pages/orderWithdraw/orderWithdraw"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#039BFF",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#e6e6e6"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#039BFF",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [{
+        "pagePath": "pages/index/index",
+        "selectedIconPath": "images/shouye1.png",
+        "iconPath": "images/shouye2.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "selectedIconPath": "images/dingdan1.png",
+        "iconPath": "images/dingdan2.png",
+        "text": "订单"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "selectedIconPath": "images/wode1.png",
+        "iconPath": "images/wode2.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

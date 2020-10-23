@@ -1,0 +1,40 @@
+<view class="keyboard">
+ <!-- <view class="keyboard-line">
+  <view bindtap="_cancelNumber" style="width: 37%;">
+    <view class="input-btn inputCancel" hover-class='active' hover-stay-time='100'>取消</view>
+  </view>
+  <view bindtap="_confirmNumber" hover-class='active' hover-stay-time='100' style="padding-right: 0;">
+    <view class="input-btn inputConfirm" hover-class='active' hover-stay-time='100'>确认</view>
+  </view>
+ </view> -->
+
+ <view class="keyboard-line">
+   <view wx:for="{{'123'}}" wx:for-item="number" data-number="{{number}}" bindtap="_inputNumber" >
+    <view class="input-btn" hover-class='active' hover-stay-time='100'>{{number}}</view>
+   </view>
+ </view>
+
+ <view class="keyboard-line">
+  <view wx:for="{{'456'}}" wx:for-item="number" data-number="{{number}}" bindtap="_inputNumber">
+    <view class="input-btn" hover-class='active' hover-stay-time='100'>{{number}}</view>
+  </view>
+ </view>
+
+<view class="keyboard-line">
+  <view wx:for="{{'789'}}" wx:for-item="number" data-number="{{number}}" bindtap="_inputNumber">
+    <view class="input-btn" hover-class='active' hover-stay-time='100'>{{number}}</view>
+  </view>
+ </view>
+
+ <view class="keyboard-line">
+  <view ></view>
+  <view data-number="0" bindtap="_inputNumber">
+    <view class="input-btn" hover-class='active' hover-stay-time='100'>0</view>
+  </view>
+  <view bindtap="_delNumber">
+    <view class="input-btn delInput">
+      <text class="iconfont icon-del">X</text>
+    </view>
+  </view>
+ </view>
+</view>

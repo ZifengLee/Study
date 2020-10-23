@@ -1,0 +1,112 @@
+/* pages/Luckydraw/Luckydraw.wxss */
+page {
+  box-sizing: border-box;
+  padding-top: 25rpx;
+  background-color: #FF6600;
+}
+
+.box {
+  width: 700rpx;
+  height: 700rpx;
+  margin: 0 auto;
+  box-sizing: border-box;
+  position: relative;
+  -webkit-box-shadow: 8px 8px 0 rgba(0, 0, 0, .2);
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, .2);
+}
+
+.list {
+  width: 220rpx;
+  height: 220rpx;
+  position: absolute;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+/* 抽奖过程中选定样式 */
+.list.change_in {
+  color: #fff;
+  background-color: #00BFFF;
+}
+
+.list_t {
+  width: 90%;
+  height: 160rpx;
+}
+
+.list_t image {
+  width: 100%;
+  height: 100%;
+}
+
+.list_b {
+  width: 90%;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 根据TOP */
+.list:nth-child(1) {
+  left: 50%;
+  top: 50%;
+  color: #fff;
+  background-color: #1CBBB4;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.list.grey:nth-child(1) {
+  background-color: #5F9EA0;
+}
+
+.list:nth-child(2),
+.list:nth-child(3),
+.list:nth-child(4) {
+  top: 0;
+}
+
+.list:nth-child(6),
+.list:nth-child(7),
+.list:nth-child(8) {
+  bottom: 0;
+}
+
+.list:nth-child(5),
+.list:nth-child(9) {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* 根据LEFT */
+.list:nth-child(2),
+.list:nth-child(8),
+.list:nth-child(9) {
+  left: 0;
+}
+
+.list:nth-child(3),
+.list:nth-child(7) {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.list:nth-child(4),
+.list:nth-child(5),
+.list:nth-child(6) {
+  right: 0;
+}

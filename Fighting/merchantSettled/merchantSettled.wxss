@@ -1,0 +1,113 @@
+body {
+  height: 100%;
+}
+
+.main {
+  height: 100%;
+  position: relative;
+}
+
+/* 内容块 */
+
+.title {
+  background-color: #D2ECFF;
+  height: 76rpx;
+  padding-top: 30rpx;
+  padding-left: 20rpx;
+  font-size: 33rpx;
+  color: #039BFF;
+}
+
+.contain {
+  padding: 0 40rpx;
+}
+
+.contain .input {
+  display: flex;
+  align-items: center;
+  border-bottom: 2rpx solid #eee;
+  padding: 30rpx 0;
+  width: 100%;
+}
+
+.contain .input label {
+  font-size: 32rpx;
+  /* flex-basis: 150rpx; */
+  color: #939393;
+}
+
+.contain .input {
+  /* width: calc(100% - 150rpx); */
+  font-size: 38rpx;
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.delete-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.address {
+  font-size: 30rpx;
+  text-align: left;
+}
+
+
+.contain .input .content {
+  padding-left: 26rpx;
+  font-size: 36rpx;
+}
+
+.input>view {
+  margin-left: 26rpx;
+  text-align: center;
+}
+
+.choose {
+  float: left;
+  width: 31%;
+  height: 200rpx;
+  margin: 20rpx 0;
+  background-color: #f4f4f4;
+  position: relative;
+}
+
+.choose>view {
+  position: absolute;
+  color: #999;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 26rpx;
+  text-align: center;
+}
+
+.flex{
+  display:flex;
+}
+
+/* 吸底 */
+
+.submit {
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  align-items: center;
+  height: 100rpx;
+  background-color: #fff;
+}
+
+.submit button {
+  background-color: #039BFF;
+  font-weight: 100;
+  color: #fff;
+  font-size: 35rpx;
+  margin-top: 15rpx;
+  /* margin-right: 108rpx;
+  margin-left: 85rpx; */
+  width: 60%;
+}

@@ -1,0 +1,46 @@
+.zhezhaocehng {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.phone {
+    width: 70%;
+    height: 400rpx;
+    background-color: #fff;
+    position: fixed;
+    top: 30%;
+    left: 15%;
+    border-radius: 30rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.phone > text {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone > text:first-child {
+    flex: 0.3;
+    border-bottom: 1rpx solid #000;
+}
+
+.phone > text:last-child {
+    flex: 0.3;
+    color: red;
+    font-size: 40rpx;
+}
+
+.phone > text:nth-child(2) {
+    flex: 0.4;
+    font-size: 44rpx;
+    border-bottom: 1rpx solid #000;
+}

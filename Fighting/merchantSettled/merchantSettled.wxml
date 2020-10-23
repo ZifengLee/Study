@@ -1,0 +1,111 @@
+<form catchsubmit="formSubmit" catchreset="formReset">
+	<view class="main">
+		<view class="title">基础信息</view>
+		<view class="contain">
+			<view class="input">
+				<label>
+					<span style="color:red;">*</span>
+					商铺名称
+				</label>
+				<input class="content" name="merchant_name" placeholder="{{merchant_name==''? '请填写' : merchant_name}}" />
+			</view>
+			<view class="input" bindtap="goToMap">
+				<label>
+					<span style="color:red;">*</span>
+					商铺地址（请点击选择）
+				</label>
+				<view class="address" bindtap="goToMap" name="address">{{address}}</view>
+			</view>
+			<view class="input">
+				<label>
+					<span style="color:red;">*</span>
+					商铺电话
+				</label>
+				<input class="content" name="mobile_phone" placeholder="{{mobile_phone==''? '请填写' : mobile_phone}}" tel="true" />
+			</view>
+			<view class="input">
+				<label>
+					<span style="color:red;">*</span>
+					店主名称
+				</label>
+				<input class="content" name="name" placeholder="{{name==''? '请填写' : name}}" />
+			</view>
+			<view class="input">
+				<label>商铺图片</label>
+				<!-- 上传图片 -->
+				<view wx:if="{{imageShangpu.length===0}}">
+					<block>
+						<upload files="{{imageShangpu}}" maxFileCount="{{maxFileCount}}" bindfiles="onimageShangpuFilesChange" />
+						<view style="font-size: 30rpx;padding-right: 20rpx;color: gray;">上传图片</view>
+					</block>
+				</view>
+				<image wx:else style="width: 210rpx;height: 210rpx;" src="{{imgbaseUrl+imageShangpu}}">
+					<icon type='cancel' class="delete-btn" data-index="{{index}}" catchtap="delImage"></icon>
+				</image>
+			</view>
+		</view>
+		<view class="title">证件信息</view>
+		<view class="contain">
+			<view class="input">
+				<label>店主证件照</label>
+				<!-- 上传图片 -->
+				<view wx:if="{{imageDianzhuzheng.length===0}}">
+					<block>
+						<upload files="{{imageDianzhuzheng}}" maxFileCount="{{maxFileCount}}" bindfiles="onimageDianzhuzhengFilesChange" />
+						<view style="font-size: 30rpx;padding-right: 20rpx;color: gray;">正面照</view>
+					</block>
+				</view>
+				<image wx:else style="width: 210rpx;height: 210rpx;" src="{{imgbaseUrl+imageDianzhuzheng}}">
+					<icon type='cancel' class="delete-btn" data-index="{{index}}" catchtap="delImage"></icon>
+				</image>
+				<view wx:if="{{imageDianzhufan.length===0}}">
+					<block>
+						<upload files="{{imageDianzhufan}}" maxFileCount="{{maxFileCount}}" bindfiles="onimageDianzhufanFilesChange" />
+						<view style="font-size: 30rpx;padding-right: 20rpx;color: gray;">反面照</view>
+					</block>
+				</view>
+				<image wx:else style="width: 210rpx;height: 210rpx;" src="{{imgbaseUrl+imageDianzhufan}}">
+					<icon type='cancel' class="delete-btn" data-index="{{index}}" catchtap="delImage"></icon>
+				</image>
+			</view>
+			<view class="input">
+				<label>营业执照</label>
+				<!-- 上传图片 -->
+				<view wx:if="{{imageYingyezhao.length===0}}">
+					<block>
+						<upload files="{{imageYingyezhao}}" maxFileCount="{{maxFileCount}}" bindfiles="onimageYingyezhaoFilesChange" />
+						<view style="font-size: 30rpx;padding-right: 20rpx;color: gray;">上传图片</view>
+					</block>
+				</view>
+				<image wx:else style="width: 210rpx;height: 210rpx;" src="{{imgbaseUrl+imageYingyezhao}}">
+					<icon type='cancel' class="delete-btn" data-index="{{index}}" catchtap="delImage"></icon>
+				</image>
+			</view>
+		</view>
+		<view class="title">银行卡信息</view>
+		<view class="contain">
+			<view class="input">
+				<label>卡主姓名</label>
+				<input class="content" name="card_name" placeholder="{{card_name==''? '请填写' : card_name}}" />
+			</view>
+			<view class="input">
+				<label>银行名称</label>
+				<input class="content" name="bank" placeholder="{{bank==''? '请填写' : bank}}" />
+			</view>
+			<view class="input">
+				<label>开户银行</label>
+				<input class="content" name="bank_name" placeholder="{{bank_name==''? '请填写' : bank_name}}" />
+			</view>
+			<view class="input">
+				<label>银行卡号</label>
+				<input class="content" name="card_code" placeholder="{{card_code==''? '请填写' : card_code}}" />
+			</view>
+		</view>
+	</view>
+	<!-- <view wx:if="{{flag!=='审核通过'}}" class="submit">
+        <button formType="submit">修改信息</button>
+    </view> -->
+	<view class="submit" wx:if="{{isAdd==true||flag==='已拒绝'}}">
+		<button formType="submit">提交申请</button>
+	</view>
+</form>

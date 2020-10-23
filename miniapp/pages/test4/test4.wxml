@@ -1,0 +1,17 @@
+<view class="wheel">
+  <view class="close">
+    <image bindtap="closeWin" src="https://o3pvuu23u.qnssl.com/48524237-601b-4611-b96d-01d99abd1ef2.png" />
+  </view>
+  <view class="wheel_wp">
+    <image mode="widthFix" src="https://o3pvuu23u.qnssl.com/2f9bddd9-bb82-47ed-bd0f-9b1bee4463b8.png" animation="{{animationData}}" />
+    <view class="wheel_pointer" bindtap="start">
+      <image mode="widthFix" src="https://o3pvuu23u.qnssl.com/e36952f5-0458-467b-890c-61941877c0c9.png" />
+    </view>
+    <view class="times">
+      <text>可抽</text>
+      <view>{{times}}次</view>
+      <button open-type="share">+</button>
+    </view>
+    <view class="invite_text">每邀请一个好友可获得一次抽奖机会</view>
+  </view>
+</view>

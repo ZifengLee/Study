@@ -1,0 +1,29 @@
+  <view class="card">
+  	<view class="card-content">
+  		<view class="title">{{name}}</view>
+  		<view class="jianhjie">
+  			<image src="{{imgBaseUrl + image}}"></image>
+  			<view>
+  				<view>{{address}}</view>
+  				<view>
+  					已有会员
+  					<span style="color:red">{{number}}</span>
+  				</view>
+  			</view>
+  		</view>
+  	</view>
+  </view>
+
+  <view class="box">
+  	<view bindtap="cj" class="list {{cjChange > 0 ? 'grey' : ''}}">抽奖</view>
+  	<block wx:for="{{prizeList}}" wx:key="key">
+  		<view class="list {{cjChange == item.index ? 'change_in' : ''}}">
+  			<view class="list_t">
+  				<image src="{{item.imgsrc}}"></image>
+  			</view>
+  			<view class="list_b">{{item.prizeName}}</view>
+  		</view>
+  	</block>
+  </view>
+
+  <button wx:if="{{showAgain}}" style="margin: 50rpx;" bindtap="againBtn">再抽一次</button>

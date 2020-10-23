@@ -1,0 +1,14 @@
+<view class="zitidian" wx:for="{{list}}" wx:key="key">
+    <view>
+        <text>{{item.name}}</text>
+        <text>{{item.mobile_phone}}</text>
+    </view>
+    <view>{{item.address}}</view>
+    <view>
+        <view bindtap="bindSelected" data-item="{{item}}">
+            <icon type="{{item.selected}}" size="16" style="margin-right:10rpx" />
+            <text>设为默认自提点</text>
+        </view>
+        <text>{{item.distance}}km</text>
+    </view>
+</view>

@@ -1,0 +1,38 @@
+.jifen {
+  width: 100vw;
+  height: 300rpx;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  justify-content: center;
+  margin-bottom: 20rpx;
+}
+.jifen>text:first-child {
+  font-size: 50rpx;
+  margin-bottom: 10rpx;
+}
+.jifen>text:last-child {
+  font-size: 26rpx;
+  color: #ffc8cf;
+}
+.jifen_item {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #ffc8cf;
+  padding: 30rpx 0;
+}
+.jifen_item>view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.jifen_item>view>text:last-child {
+  font-size: 26rpx;
+  color: #ffc8cf;
+  margin-top: 10rpx;
+}
