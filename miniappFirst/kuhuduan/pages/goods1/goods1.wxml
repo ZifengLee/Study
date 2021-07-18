@@ -1,0 +1,80 @@
+<image src='../../img/button-top.png' class='goTop' hidden='{{!floorstatus}}' bindtap="goTop"></image>
+<!-- 商品列表 -->
+<view class="goods_content" wx:if="{{goodsList.length!==0}}">
+		<view class="goods" wx:for="{{goodsList}}" wx:key="key" catchtap="goodDetail" data-id="{{item.id}}">
+				<image class="goods_img" src="{{ imgBaseUrl + item.image }}"></image>
+				<view class="goods_title">{{item.name}}</view>
+				<view class="goods_price">
+						<view class="price_content">
+								<view class="price_actually">
+										<span style="font-size:24rpx;">￥</span>
+										{{item.actual_price}}
+								</view>
+								<view class="price_old">
+										<span style="font-size:20rpx;">￥</span>
+										{{item.bid_price}}
+								</view>
+						</view>
+						<button type="warn" size="mini" class="goods_btn">查看详情</button>
+				</view>
+		</view>
+		<view class="goods" wx:for="{{goodsList}}" wx:key="key" catchtap="goodDetail" data-id="{{item.id}}">
+				<image class="goods_img" src="{{ imgBaseUrl + item.image }}"></image>
+				<view class="goods_title">{{item.name}}</view>
+				<view class="goods_price">
+						<view class="price_content">
+								<view class="price_actually">
+										<span style="font-size:24rpx;">￥</span>
+										{{item.actual_price}}
+								</view>
+								<view class="price_old">
+										<span style="font-size:20rpx;">￥</span>
+										{{item.bid_price}}
+								</view>
+						</view>
+						<button type="warn" size="mini" class="goods_btn">查看详情</button>
+				</view>
+		</view>
+		<view class="goods" wx:for="{{goodsList}}" wx:key="key" catchtap="goodDetail" data-id="{{item.id}}">
+				<image class="goods_img" src="{{ imgBaseUrl + item.image }}"></image>
+				<view class="goods_title">{{item.name}}</view>
+				<view class="goods_price">
+						<view class="price_content">
+								<view class="price_actually">
+										<span style="font-size:24rpx;">￥</span>
+										{{item.actual_price}}
+								</view>
+								<view class="price_old">
+										<span style="font-size:20rpx;">￥</span>
+										{{item.bid_price}}
+								</view>
+						</view>
+						<button type="warn" size="mini" class="goods_btn">查看详情</button>
+				</view>
+		</view>
+		<view class="goods" wx:for="{{goodsList}}" wx:key="key" catchtap="goodDetail" data-id="{{item.id}}">
+				<image class="goods_img" src="{{ imgBaseUrl + item.image }}"></image>
+				<view class="goods_title">{{item.name}}</view>
+				<view class="goods_price">
+						<view class="price_content">
+								<view class="price_actually">
+										<span style="font-size:24rpx;">￥</span>
+										{{item.actual_price}}
+								</view>
+								<view class="price_old">
+										<span style="font-size:20rpx;">￥</span>
+										{{item.bid_price}}
+								</view>
+						</view>
+						<button type="warn" size="mini" class="goods_btn">查看详情</button>
+				</view>
+		</view>
+</view>
+<view class="loadmore nothing" wx:else>没有相关商品哦~</view>
+<!-- 搜索区域 -->
+<view id="search">
+		<image id="search_img" src="../../images/search.png" />
+		<view id="search_input" bindtap="goSearch">请输入商品名称</view>
+		<view catchtap="itmeSearch">搜索</view>
+</view>
+<image src='../../images/up.png' class='goTop' hidden='{{!floorstatus}}' bindtap="goTop"></image>

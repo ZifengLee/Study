@@ -1,0 +1,16 @@
+<view class='ms-content-box'>
+	<view class='ms-content' bindtap='selectToggle'>
+		<view class='ms-text' style="color: {{color}};" wx:if="{{selected}}">{{selectText}}</view>
+		<view class='ms-text' style="color: {{color}};" wx:else>{{propArray.selectText}}</view>
+		<!-- <view class="{{selectShow ? 'icon-up' : 'icon-down'}}"></view> -->
+		<image class='select_img' src='../../images/xiala2.png'  background-size="contain" wx:if="{{xiala == 2}}"></image>
+		<image class='select_img' src='../../images/xiala3.png'  background-size="contain" wx:if="{{xiala==3}}"></image>
+		  <image class='select_img' src='../../images/xiala.png'  background-size="contain" wx:if="{{xiala == 0}}"></image> 
+		  <image class='select_img' src='../../images/xiala1.png'  background-size="contain" wx:if="{{xiala == 1}}"></image>
+	</view>
+	<view class='ms-options' wx:if="{{selectShow}}">
+		<view wx:for="{{propArray.selectArray}}" wx:key='index'>
+		<view data-index="{{index}}" class='ms-option {{nowId == index ? "active" : ""}}' bindtap='setText'>{{item.text || item.value || item}}</view>
+		</view>
+	</view>
+</view>

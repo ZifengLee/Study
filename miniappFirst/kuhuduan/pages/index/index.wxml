@@ -1,0 +1,119 @@
+<!-- 店面卡片区域 -->
+<view id="merchant">
+		<view id="message">
+				<image id="merchantImage" src="../../images/logo.jpg"></image>
+				<view id="merchantCenter">
+						<view id="merchantName">{{shop.merchant_name}}</view>
+						<view id="merchantAddress">{{shop.address}}</view>
+				</view>
+		</view>
+		<view id="vipContent">
+				<view id="vipNumber">{{number}}</view>
+				<view id="vip">会员数</view>
+		</view>
+</view>
+<!-- 活动专区 -->
+<view id="active" wx:if="{{couponList.length!=0}}">
+		<view id="activeItem" wx:for="{{couponList}}" wx:key="id" bindtap="{{!buttonClicked?'goToPay':''}}" data-id="{{item.id}}">
+				<image id="activeImage" src="{{ imgBaseUrl + item.image }}"></image>
+		</view>
+</view>
+<!-- 抽奖 -->
+<view id="lottery">
+		<image id="bg" src="../../images/lucky/beijing.png"></image>
+		<!-- 中奖轮播 -->
+		<view id="swiper">
+				<swiper id="swiperContent" autoplay vertical circular interval="1000">
+						<block wx:for='{{winnerList}}' wx:key="index">
+								<swiper-item class="swiperItem">
+										<view style="width:100%;text-align: center;">
+												{{item.custom_name}} 刚刚抽中了{{item.number}}现金券
+										</view>
+								</swiper-item>
+						</block>
+				</swiper>
+		</view>
+		<view id="centerConent">
+				<view id="cash">当前现金券：{{cashCoupons}}</view>
+				<view id="time" wx:if="{{freeTime==0}}">当日抽奖次数：{{time}}次</view>
+				<view id="time" wx:if="{{freeTime!=0}}">免费：{{freeTime}}次</view>
+		</view>
+		<!-- 中间转盘 -->
+		<view id="trans">
+				<!-- 转动部分 -->
+				<view id="rotate" style="transform:rotate({{trasn}}deg);">
+						<image id="rotateBg" src="../../images/lucky/zhuanpan.png"></image>
+						<view id="transContent">
+								<view id="transContent0" class="contentItem" style="transform: rotate(0deg);">
+										<view id="prise">{{lotteryList[0].prize_name}}</view>
+										<image id="priseImage" src="{{ imgBaseUrl + lotteryList[0].image }}"></image>
+								</view>
+								<view id="transContent1" class="contentItem" style="transform: rotate(45deg);">
+										<view id="prise">{{lotteryList[1].prize_name}}</view>
+										<image id="priseImage" src="{{ imgBaseUrl + lotteryList[1].image }}"></image>
+								</view>
+								<view id="transConten2" class="contentItem" style="transform: rotate(90deg);">
+										<view id="prise">{{lotteryList[2].prize_name}}</view>
+										<image id="priseImage" src="{{ imgBaseUrl + lotteryList[2].image }}"></image>
+								</view>
+								<view id="transContent3" class="contentItem" style="transform: rotate(135deg);">
+										<view id="prise">{{lotteryList[3].prize_name}}</view>
+										<image id="priseImage" src="{{ imgBaseUrl + lotteryList[3].image }}"></image>
+								</view>
+								<view id="transContent4" class="contentItem" style="transform: rotate(180deg);">
+										<view id="prise">{{lotteryList[4].prize_name}}</view>
+										<image id="priseImage" src="{{ imgBaseUrl + lotteryList[4].image }}"></image>
+								</view>
+								<view id="transContent5" class="contentItem" style="transform: rotate(225deg);">
+										<view id="prise">{{lotteryList[5].prize_name}}</view>
+										<image id="priseImage" src="{{ imgBaseUrl + lotteryList[5].image }}"></image>
+								</view>
+								<view id="transContent6" class="contentItem" style="transform: rotate(270deg);">
+										<view id="prise">{{lotteryList[6].prize_name}}</view>
+										<image id="priseImage" src="{{ imgBaseUrl + lotteryList[6].image }}"></image>
+								</view>
+								<view id="transContent7" class="contentItem" style="transform: rotate(315deg);">
+										<view id="prise">{{lotteryList[7].prize_name}}</view>
+										<image id="priseImage" src="{{ imgBaseUrl + lotteryList[7].image }}"></image>
+								</view>
+						</view>
+				</view>
+				<!-- 固定部分 -->
+				<view id="fixed">
+						<image id="arrow" src='../../images/lucky/jiantou.png'></image>
+						<view id="center" bindtap="{{!buttonClicked?'zhuanin':''}}">开始抽奖</view>
+				</view>
+		</view>
+		<!-- 中奖规则 -->
+		<view id="rule" bindtap="openActivityRule">抽奖规则</view>
+		<view id="ruleShadow" wx:if="{{showMask}}">
+				<view id="ruleContent">
+						<view id="ruleTitle">抽奖规则</view>
+						<scroll-view scroll-y="true" id="ruleTest">{{rule}}</scroll-view>
+						<view id="btnContain">
+								<view id="btn" bindtap="colseActivityRule">×</view>
+						</view>
+				</view>
+		</view>
+</view>
+<!-- 商品列表 -->
+<view class="goods_content" wx:if="{{goodsList.length!==0}}">
+		<view class="goods" wx:for="{{goodsList}}" wx:key="key" catchtap="goodDetail" data-id="{{item.id}}">
+				<image class="goods_img" src="{{ imgBaseUrl + item.image }}"></image>
+				<view class="goods_title">{{item.name}}</view>
+				<view class="goods_price">
+						<view class="price_content">
+								<view class="price_actually">
+										<span style="font-size:24rpx;">￥</span>
+										{{item.actual_price}}
+								</view>
+								<view class="price_old">
+										<span style="font-size:20rpx;">￥</span>
+										{{item.bid_price}}
+								</view>
+						</view>
+						<button type="warn" size="mini" class="goods_btn">查看详情</button>
+				</view>
+		</view>
+</view>
+<view class="loadmore merchant" wx:else>没有相关商品哦~</view>

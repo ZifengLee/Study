@@ -1,0 +1,171 @@
+page {
+    background-color: #f2f2f2;
+    padding: 0rpx;
+    margin: 0rpx;
+}
+
+.allPage {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.stores_detail {
+    padding: 20rpx 0rpx;
+    /* padding-left: 12px; */
+    background-color: #039BFF;
+    color: white;
+}
+
+.fs30 {
+    font-size: 30rpx;
+    padding-bottom: 20rpx;
+}
+
+.fs40 {
+    font-size: 44rpx;
+    padding-bottom: 20rpx;
+}
+
+.disp1 {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.disp {
+    display: flex;
+    text-align: center;
+}
+
+.jce {
+    justify-content: flex-end;
+}
+
+.w50 {
+    width: 50%;
+}
+
+.rule {
+    width: 150rpx;
+    height: 30rpx;
+    background-color: #025F9C;
+    text-align: end;
+    border-top-left-radius: 6em;
+    border-bottom-left-radius: 6em;
+    padding-right: 10rpx;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 10rpx;
+}
+
+#scroll {
+    height: 100%;
+    margin-top: 76rpx;
+    padding-bottom: 200rpx;
+    margin-bottom: 200rpx;
+    overflow: hidden;
+    background-color: white;
+}
+
+.duizhang {
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    padding: 24rpx;
+}
+
+.main-dui {
+    width: 92%;
+    margin: 16rpx auto;
+    font-size: 14px;
+}
+
+.qian {
+    font-size: 33rpx;
+}
+
+.title {
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    font-size: 39rpx;
+    border-bottom: 1rpx solid gray;
+}
+
+.kuai {
+    margin-top: 18rpx;
+    border-bottom: 1rpx solid gray;
+
+}
+
+.top-kuai {
+    padding: 20rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.min-kuai {
+    color: #A2A2A2;
+    margin-top: 4rpx;
+    text-align: right;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    padding-bottom: 14rpx;
+}
+
+.bot-kuai {
+    background-color: #eaeaea;
+    margin-top: 4rpx;
+    padding: 20rpx;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    color: brown;
+}
+
+.submit {
+    margin-top: 35rpx;
+    height: 220rpx;
+}
+
+.submit button {
+    width: 280rpx;
+    font-weight: 100;
+    border-radius: 50rpx;
+    justify-content: space-between;
+}
+
+/* 设置遮罩层样式 */
+.mask {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    background: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    /* display: flex;
+    align-items: center; */
+}
+
+.bgc {
+    width: 80%;
+    justify-content: space-between;
+    height: 410rpx;
+    background-color: white;
+    margin: auto;
+    margin-top: 400rpx;
+    border-radius: 20rpx;
+}
+
+.center {
+    text-align: center;
+    padding-top: 12rpx;
+}
+
+.mask .image {
+    width: 100rpx;
+    height: 100rpx;
+    margin: auto;
+    margin-top: 30rpx;
+}

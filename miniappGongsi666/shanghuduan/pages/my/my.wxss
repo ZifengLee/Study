@@ -1,0 +1,169 @@
+.all {
+    position: absolute;
+}
+
+.stores_detail {
+    padding: 20rpx 0rpx;
+    padding-left: 12px;
+    background-color: #039bff;
+    color: white;
+}
+
+.fs32 {
+    font-size: 32rpx;
+    padding-bottom: 20rpx;
+}
+
+.fs40 {
+    font-size: 44rpx;
+    padding-bottom: 20rpx;
+}
+
+.disp {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.disp1 {
+    display: flex;
+    /* justify-content: space-between; */
+    flex-direction: row;
+}
+
+.contain {
+    height: 200rpx;
+    width: 237rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mlr {
+    /* margin-left: 20rpx;
+    margin-right: 20rpx; */
+    width: 710rpx;
+}
+
+.bb {
+    border-bottom: 1rpx solid gray;
+}
+
+.bbw {
+    border-bottom: 25rpx solid #f0f0f0;
+}
+
+.bt {
+    border-top: 1rpx solid gray;
+}
+
+.br {
+    border-right: 1rpx solid gray;
+}
+
+.cr {
+    color: #FF8963;
+}
+
+/* 公告轮播 */
+.swiper-view {
+    width: 100%;
+    height: 72rpx;
+    margin-top: 7rpx;
+    margin-bottom: 7rpx;
+}
+
+.swiper-view image {
+    width: 49rpx;
+    height: 49rpx;
+}
+
+.swiper_container {
+    height: 56rpx;
+    width: 100%;
+}
+
+.swiper_item {
+    width: 95%;
+    height: 50rpx;
+    display: flex;
+    margin: 10rpx auto;
+    line-height: 50rpx;
+    border-radius: 19rpx;
+    font-size: 35rpx;
+}
+
+.gonggao {
+    width: 119rpx;
+    margin-left: 16rpx;
+    font-size: 38rpx;
+}
+
+.swiper_item1 {
+    width: 550rpx;
+}
+
+.swiper_item image {
+    width: 40rpx;
+    height: 38rpx;
+}
+
+.swiper_item text {
+    margin-left: 30rpx;
+    font-size: 34rpx;
+    line-height: 50rpx;
+}
+
+.pt {
+    padding-top: 28rpx;
+}
+
+.photo {
+    width: 70rpx;
+    height: 70rpx;
+}
+
+
+/* 设置遮罩层样式 */
+.mask {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    background: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.mask .images {
+    position: absolute;
+    height: 100%;
+    /* z-index: 10000; */
+    margin-top: -165rpx;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.AnnounceDetail {
+    /* z-index: 100000; */
+    position: absolute;
+    width: 100%;
+margin-top: 520rpx;
+}
+
+.AnnounceDetail .content {
+    width: 70%;
+    height: 420rpx;
+    text-align: center;
+    color: #666666;
+    padding: 0 115rpx;
+    text-indent: 1em;
+}
+
+.AnnounceDetail .btn1 {
+    z-index: 100;
+    text-align: center;
+    width: 100%;
+    color: white;
+}

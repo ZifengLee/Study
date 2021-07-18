@@ -1,0 +1,26 @@
+.title {
+    text-align: center;
+}
+
+.chess {
+    /*块级元素*/
+    display: block;
+    /* 画布居中 */
+    margin: 50px auto;
+    /* 立体感 */
+    box-shadow: 5px 5px 5px #b9b9b9, -2px -2px 2px #efefef;
+    /* 添加光标小手 */
+    cursor: pointer;
+}
+
+.btn {
+    text-align: center;
+}
+
+.reStart {
+    padding: 10px 20px;
+    background-color: pink;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}

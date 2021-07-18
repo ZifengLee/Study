@@ -1,0 +1,50 @@
+<!-- 明细 -->
+<view id="scroll">
+		<view class="main-dui">
+				<!-- 各订单明细 -->
+				<view class="kuai" wx:for="{{cashCouponsList}}" wx:key="index">
+						<view class="top-kuai">
+								<span>{{item.create_time}}</span>
+								<span class="qian" style="{{item.money > 0 ? 'color: #FF5D26':'color: #039BFF'}};">
+										{{item.money>0? "+"+item.money :item.money}}
+								</span>
+						</view>
+						<view class="min-kuai">{{item.type}}</view>
+				</view>
+		</view>
+</view>
+<view class="stores_detail">
+		<view class="disp1">
+				<view>
+						<view class="fs30">总现金券</view>
+						<view class="fs40">{{cashCoupon.all_prize}}</view>
+				</view>
+				<view class="fs30 rule" catchtap='showMask'>提现规则</view>
+		</view>
+		<view class="disp">
+				<view class="w50">
+						<view class="fs30">待提现</view>
+						<view class="fs40">{{cashCoupon.prize_money}}</view>
+				</view>
+				<view class="w50">
+						<view class="fs30">已提现</view>
+						<view class="fs40">{{cashCoupon.cash_prize}}</view>
+				</view>
+		</view>
+		<view class="submit">
+				<button bindtap="goToApplyWithdraw" data-type="2" style="background-color: blue;color:white;">
+						申请提现
+				</button>
+		</view>
+</view>
+<view class="duizhang">明细</view>
+<!-- 提现规则遮罩层 -->
+<view class="mask" hidden="{{flag}}">
+		<view class="bgc">
+				<view class="center" style="font-size: 38rpx;padding-bottom: 20rpx;">提现规则</view>
+				<view class="center">{{rule}}</view>
+		</view>
+		<view class="image">
+				<image style="height:100%;width:100%;" bindtap="closeMask" src='../../images/quxiao.png' />
+		</view>
+</view>

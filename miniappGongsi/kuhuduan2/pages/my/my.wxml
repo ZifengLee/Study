@@ -1,0 +1,75 @@
+<view class="top">
+	<view wx:if="{{is_custom == 1}}" class="title">
+		<view style="display:flex;">
+			<view class="avatar">
+				<!-- 通过open-data得到微信的头像 -->
+				<open-data type="userAvatarUrl"></open-data>
+			</view>
+			<view class="name_phone">
+				<!-- 通过open-data得到微信的昵称 -->
+				<open-data type="userNickName"></open-data>
+			</view>
+		</view>
+		<view class="btn" bindtap="goScanCode">+</view>
+	</view>
+
+	<view wx:else class="title">
+		<button open-type="getUserInfo" bindgetuserinfo="login">登录</button>
+	</view>
+
+	<view class="jifenbankuai">
+		<view>
+			<text>{{cashCoupons}}</text>
+			<text>当前现金券</text>
+		</view>
+		<view catchtap="goCashCoupons">现金券明细 ></view>
+	</view>
+</view>
+
+<view class="zitidian">
+	<view class="row zid" catchtap="pickUpPoint">
+		<view>
+			<image src="../../images/zitidian.png"></image>
+			<view>当前所在自提点</view>
+		</view>
+		<image src="../../images/qianwang.svg"></image>
+	</view>
+	<view class="zitidian_content">
+		<view>{{merchantInfo.merchant_name}}</view>
+		<view>{{merchantInfo.address}}</view>
+		<view>{{merchantInfo.mobile_phone}}</view>
+	</view>
+</view>
+<!-- 分割线 -->
+<view class="line"></view>
+<!-- 各种操作 -->
+<view class="operate">
+	<view class="row" catchtap="goCart">
+		<view>
+			<image src="../../images/gouwuche.png"></image>
+			<view>购物车</view>
+		</view>
+		<image src="../../images/qianwang.svg"></image>
+	</view>
+	<view class="row" catchtap="goBasicSet">
+		<view>
+			<image src="../../images/shezhi.png"></image>
+			<view>基础设置</view>
+		</view>
+		<image src="../../images/qianwang.svg"></image>
+	</view>
+	<view class="row" catchtap="contactServicePhone">
+		<view>
+			<image src="../../images/kefu.png"></image>
+			<view>联系客服</view>
+		</view>
+		<image src="../../images/qianwang.svg"></image>
+	</view>
+	<view class="row" catchtap="aboutUs">
+		<view>
+			<image src="../../images/guanyuwomen.png"></image>
+			<view>关于我们</view>
+		</view>
+		<image src="../../images/qianwang.svg"></image>
+	</view>
+</view>

@@ -1,0 +1,111 @@
+<view>
+	<!-- 店面卡片区域 -->
+	<view class="card">
+		<view class="shop">
+			<image src="{{ imgBaseUrl + shop.image }}" style="width: 120rpx;height: 120rpx;border-radius: 50%;"></image>
+			<view class="content">
+				<view>{{shop.name}}</view>
+				<view>{{shop.address}}</view>
+			</view>
+		</view>
+		<view class="vip">
+			<view style="color:red;font-size:40rpx;">{{number}}</view>
+			<view style="font-size:24rpx;">会员数</view>
+		</view>
+	</view>
+
+	<!--活动专区 -->
+	<view class="coupon_content" wx:if="{{couponList.length!=0}}">
+		<view class="coupon" wx:for="{{couponList}}" wx:key="key" catchtap="goodDetail" data-id="{{item.id}}">
+			<image catchtap="goToPay" src="{{ imgBaseUrl + item.image }}" style="width: 100%;height: 140rpx;"></image>
+		</view>
+	</view>
+
+	<!--抽奖 -->
+	<view class="lottery" style="position:relative;">
+		<view style="position:absolute;width:100%;top: 450rpx;">
+
+			<swiper class="left-top" autoplay circular interval="3000">
+				<block wx:for='{{winnerList}}' wx:key="index">
+					<swiper-item class="left-person">
+						<view style="width:100%;text-align: center;">{{item.custom_name}}刚刚抽中了{{item.number}}现金券</view>
+					</swiper-item>
+				</block>
+			</swiper>
+			<!-- 中奖轮播
+		</view> -->
+			<view class="number">
+				<view>
+					当前现金券：{{cashCoupons}}
+				</view>
+				<view>
+					当日抽奖次数：{{time}}次
+				</view>
+			</view>
+
+			<!-- 中间转盘 -->
+			<view style="position:relative;">
+
+				<view style="position:absolute;right: calc((100% - 80rpx) / 2);top: -20rpx;z-index: 50;">
+					<image class="photo" src='../../images/sanjiao.png' />
+				</view>
+				<view id="rotate" class="index" bindtap="zhuanin" style="transform:rotate({{trasn}}deg);">
+					<!-- <view style="position:absolue;z-index:10;" >
+			<image src="../../images/zhuanpan.png"/>
+			</view> -->
+
+					<view class="xian"></view>
+					<view class="xian"></view>
+					<view class="xian"></view>
+					<view class="xian"></view>
+					<view class="detail" style="transform: rotate(-22.50deg);">
+						<view>{{lotteryList[0].prize_name}}</view>
+						<image style="width: 60rpx;height: 60rpx;margin-bottom: 16rpx;" src="../../images/lucky/GoldCoin.png" />
+					</view>
+					<view class="detail" style="transform: rotate(22.5deg);">
+						<view>{{lotteryList[1].prize_name}}</view>
+						<image style="width: 60rpx;height: 60rpx;margin-bottom: 16rpx;" src="../../images/lucky/GoldCoin.png" />
+					</view>
+					<view class="detail" style="transform: rotate(67.5deg);">
+						<view>{{lotteryList[2].prize_name}}</view>
+						<image style="width: 60rpx;height: 60rpx;margin-bottom: 16rpx;" src="../../images/lucky/GoldCoin.png" />
+					</view>
+					<view class="detail" style="transform: rotate(112.5deg);">
+						<view>{{lotteryList[3].prize_name}}</view>
+						<image style="width: 60rpx;height: 60rpx;margin-bottom: 16rpx;" src="../../images/lucky/GoldCoin.png" />
+					</view>
+					<view class="detail" style="transform: rotate(157.5deg);">
+						<view>{{lotteryList[4].prize_name}}</view>
+						<image style="width: 60rpx;height: 60rpx;margin-bottom: 16rpx;" src="../../images/lucky/GoldCoin.png" />
+					</view>
+					<view class="detail" style="transform: rotate(202.5deg);">
+						<view>{{lotteryList[5].prize_name}}</view>
+						<image style="width: 60rpx;height: 60rpx;margin-bottom: 16rpx;" src="../../images/lucky/GoldCoin.png" />
+					</view>
+					<view class="detail" style="transform: rotate(247.5deg);">
+						<view>{{lotteryList[6].prize_name}}</view>
+						<image style="width: 60rpx;height: 60rpx;margin-bottom: 16rpx;" src="../../images/lucky/GoldCoin.png" />
+					</view>
+					<view class="detail" style="transform: rotate(292.5deg);">
+						<view>{{lotteryList[7].prize_name}}</view>
+						<image style="width: 60rpx;height: 60rpx;margin-bottom: 16rpx;" src="../../images/lucky/GoldCoin.png" />
+					</view>
+				</view>
+			</view>
+
+			<view class="activity" bindtap="openActivityRule">抽奖规则</view>
+			<view class="activity-rule" wx:if="{{showMask}}">
+				<view class="activity-content">
+					<view class="rule">抽奖规则</view>
+					<view style="text-indent: 0.8rem;padding: 20rpx;">
+						{{rule}}
+					</view>
+					<view style="width:100%;position:absolute;bottom:0;">
+						<view class="btn" bindtap="colseActivityRule">×</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<image class="beijing" style="width: 100%;" mode="widthFix" src="../../images/lucky/beijing.png" />
+	</view>
+</view>

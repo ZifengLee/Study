@@ -1,0 +1,156 @@
+.top {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    height: 350rpx;
+    margin-bottom: 25rpx;
+}
+
+.avatar {
+    width: 130rpx;
+    height: 130rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 40rpx;
+}
+
+.avatar>image {
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+}
+
+.btn {
+    text-align: center;
+    border-radius: 20%;
+    background-color: white;
+    color: red;
+    font-size: 48rpx;
+    width: 40rpx;
+    line-height:40rpx;
+    font-weight: 658;
+    margin-right: 20rpx;
+}
+
+.title {
+    background-color: red;
+    height: 245rpx;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+}
+
+.name_phone {
+    color: #fff;
+    margin-top: 20rpx;
+    margin-left:40rpx;
+}
+
+.jifenbankuai {
+    width: 93%;
+    height: 150rpx;
+    font-size: 30rpx;
+    background-color: #fff;
+    border-radius: 20rpx;
+    position: absolute;
+    bottom: 20rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: red;
+    box-sizing: border-box;
+    padding: 0 50rpx;
+    box-shadow: 10rpx 0 8rpx -8rpx rgb(211, 211, 211),
+        -6px 0 5px -5px rgb(211, 211, 211), 0px 6px 5px -5px rgb(211, 211, 211);
+}
+
+.jifenbankuai>view:first-child {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.jifenbankuai>view:first-child>text {
+    padding-bottom: 10rpx;
+}
+
+.zitidian {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.zitidian_content {
+    width: 90%;
+    height: 172rpx;
+    background-color: #f3f3f3;
+    padding-left: 30rpx;
+}
+
+.zitidian_content>view:first-child {
+    font-size: 34rpx;
+    font-weight: bold;
+    margin-bottom: 15rpx;
+    margin-top: 20rpx;
+    color: #333;
+}
+
+.zitidian_content>view:not(:first-child) {
+    color: #949494;
+    font-size: 28rpx;
+    margin-bottom: 6rpx;
+}
+
+.line {
+    width: 100%;
+    height: 20rpx;
+    background-color: #f3f3f3;
+    margin: 20rpx 0;
+}
+
+.row {
+    width: 90%;
+    height: 60rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    color: #333;
+    font-size: 30rpx;
+}
+
+.zid{
+    padding-bottom: 30rpx;
+}
+
+.row>view {
+    display: flex;
+    font-weight: bold;
+}
+
+.row>view>image {
+    width: 40rpx;
+    height: 40rpx;
+    padding-right: 16rpx;
+}
+
+.row>image {
+    width: 28rpx;
+    height: 28rpx;
+}
+
+.operate {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.operate>view {
+    border-bottom: 1rpx solid #CFCFCF;
+    padding: 50rpx 0rpx;
+}

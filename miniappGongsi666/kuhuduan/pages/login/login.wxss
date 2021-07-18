@@ -1,0 +1,108 @@
+.head {
+	width: 100%;
+	/* height: 400rpx; */
+	background-color: #01ba45;
+	font-size: 30rpx;
+	color: #fff;
+}
+
+/* 登录 */
+.loginAll {
+	position: fixed;
+	z-index: 10000;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+.login {
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%, -20%);
+	width: 75%;
+}
+
+.header1 {
+	text-align: center;
+	width: 180rpx;
+	height: 180rpx;
+	margin: 0 auto;
+}
+
+.header1 image {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.content {
+	font-size: 32rpx;
+	margin-bottom: 38px;
+	color: #000;
+	border-top: 1rpx solid rgb(155, 155, 155);
+	padding-top: 70rpx;
+	margin-top: 40rpx;
+}
+
+.content>view {
+	font-weight: 550;
+	margin-bottom: 20rpx;
+}
+
+.content>text {
+	color: rgb(155, 155, 155);
+}
+
+.bottom {
+	font-size: 30rpx;
+	font-weight: 100;
+	border-radius: 70rpx;
+}
+
+/* 用户协议 */
+.shuoming {
+	height: 50rpx;
+	font-size: 30rpx;
+	color: #000;
+	margin-top: 30rpx;
+}
+
+.group {
+	width: 100%;
+	height: 100%;
+}
+
+.label-1,
+.label-2 {
+	font-size: 26rpx;
+	line-height: 40rpx;
+}
+
+.label-1__text,
+.label-2__text {
+	vertical-align: middle;
+}
+
+.label-1__icon {
+	position: relative;
+	margin-right: 10px;
+	display: inline-block;
+	vertical-align: middle;
+	width: 18px;
+	height: 18px;
+	background: #fcfff4;
+	border: 1px solid #ccc
+}
+
+.label-1__icon-checked {
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 12px;
+	height: 12px;
+	background: #19d900;
+}

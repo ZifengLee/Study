@@ -1,0 +1,121 @@
+body {
+    height: 100%;
+}
+
+.main {
+    position: relative;
+    font-size: 34rpx;
+}
+
+.contain {
+    padding: 0 40rpx;
+    padding-bottom: 30rpx;
+    border-bottom: 20rpx solid #eee;
+}
+
+.border {
+    border-bottom: 2rpx solid #eee;
+}
+
+.pt10 {
+    padding-top: 26rpx;
+}
+
+.pb10 {
+    padding-bottom: 30rpx;
+}
+
+.disf {
+    display: flex;
+}
+
+.num {
+    background-color: #039BFF;
+    color: white;
+    text-align: center;
+    width: 100rpx;
+}
+
+.jcsb {
+    justify-content: space-between;
+}
+
+.cred {
+    color: #FF8963;
+}
+
+image {
+    width: 140rpx;
+    height: 140rpx;
+}
+
+/* 吸底 */
+.submit {
+    z-index: 100;
+    left: 0;
+    width: 100%;
+    align-items: center;
+    height: 100rpx;
+    background-color: #fff;
+}
+
+.submit button {
+    background-color: #039BFF;
+    font-weight: 100;
+    color: #fff;
+    font-size: 35rpx;
+    margin-top: 15rpx;
+    width: 70%;
+}
+
+/* 设置遮罩层样式 */
+#mask {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    background: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+#bgc {
+    width: 70%;
+    height: 390rpx;
+    background-color: white;
+    margin: auto;
+    margin-top: 400rpx;
+    border-radius: 20rpx;
+    position: relative;
+}
+
+#maskCenter {
+    text-align: center;
+    padding-top: 30rpx;
+    font-size: 15px;
+    padding-bottom: 8px;
+    border-bottom: 0.5px solid black;
+}
+
+#center {
+    text-align: center;
+    line-height: 180rpx;
+}
+
+#button {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    line-height: 100rpx;
+    border-top: 1rpx solid black;
+}
+
+#button view:first-child {
+    border-right: 1rpx solid black;
+}
+
+#button view {
+    width: 50%;
+    text-align: center;
+}

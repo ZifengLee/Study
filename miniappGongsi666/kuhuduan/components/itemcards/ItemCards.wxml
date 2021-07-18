@@ -1,0 +1,89 @@
+<!--components/childpages/storeinformation/itemcards/ItemCards.wxml-->
+<view class="itemcards">
+	<view class="itemcards-box">
+		<view class="itemcards-left">
+			<image class="itemcards-left-img" mode="widthFix" src="{{itemData.imgUrl}}"></image>
+		</view>
+		<view class="itemcards-right">
+			<view class="itemcards-right-title">{{itemData.skuName}}</view>
+			<!-- 规格月销 -->
+			<view class="itemcards-right-gift">
+				<!-- 规格 -->
+				<!-- <view class="specifications">
+					<span></span>
+				</view> -->
+				<span>规格 {{itemData.specifications}}</span>
+				<span>月销 {{itemData.pin}}</span>
+			</view>
+			<!-- 价格 -->
+			<view class="itemcards-right-sale-box">
+				<span class="itemcards-right-sale-price">￥{{itemData.realTimePrice}}</span>
+				<span class="itemcards-right-sale-origin-price">￥{{itemData.basicPrice}}</span>
+				<span class="addCart" bindtap="joinCart">+</span>
+			</view>
+			<view class="itemcards-right-sale-discount">直降2.7折</view>
+
+		</view>
+	</view>
+	<view class='mask' hidden='{{mask}}' catchtap='hideAllBox'></view>
+	<!--购物车弹窗-->
+	<view class='lay-box detail-cart {{!cartBox ? "on" : ""}}'>
+		<view class='box-cart-title'>
+			<image src="{{data.item_img[0][0]}}" class='box-img'></image>
+			<view class='price-box'>
+				<!--价格库存-->
+				<view class='price'>￥9.8</view>
+				<view class="sales">库存(99)</view>
+				<!--右上角关闭按钮-->
+				<text class='lay-close' bindtap='showCart'>×</text>
+			</view>
+		</view>
+		<scroll-view scroll-y class='box-content'>
+			<!-- 单规格选择 -->
+			<view wx:if='{{danguige}}' class='box-spec'>
+				<view class='cor-grey'>规格</view>
+				<view class='spec-items'>
+					<!--规格列表-->
+					<view class='spec-item {{specActive == item.index ? "on" : ""}}' wx:for="{{guigelist}}" wx:key="*this" data-gui_id="{{item.id}}"
+					 data-item_id="{{item.id}}" data-index ="{{item.index}}" data-price="{{item.price}}" data-inventory="{{item.inventory}}" data-limit="{{item.limit_number}}"
+					 bindtap="OneSelectSpec">{{item.guige}}</view>
+				</view>
+			</view>
+
+
+			<!--多规格-多属性选择-->
+			<view wx:if='{{duoguige}}' class='box-spec' wx:for="{{data.sku_list}}" wx:key="*this" wx:for-index="boxindex">
+				<view class='cor-grey'>{{item.name}}</view>
+				<view class='spec-items'>
+					<!--属性列表-->
+					<button class='spec-item {{attr.isHasSpec ? "on" : ""}} {{attr.isCould ? "" : "grey"}}' disabled="{{!attr.isCould}}"
+					 wx:for="{{item.list}}" wx:for-item="attr" wx:key="*this" data-gui_id="{{attr.id}}" data-item_id="{{attr.sp_value_id}}"
+					 data-num="{{attr.num}}" data-index="{{boxindex}}" data-index_x="{{index}}" data-attr="{{attr}}" data-spname="{{attr.sp_value_name}}"
+					 bindtap="selectSpec">
+						商品
+					</button>
+				</view>
+			</view>
+
+			<!--选择数量-->
+			<view class='updown-box jus-b ali-c'>
+				<view class='cor-grey'>数量</view>
+				<!--商品数量加减按钮-->
+				<view class='updown flexc'>
+					<!--减-->
+					<view class='down' hover-class='button-hover' bindtap='reduceNumber'>
+						<text>-</text>
+					</view>
+					<!--输入框-->
+					<input type='number' class='nums' value='{{goodsNumber}}' bindinput="inputValueChange"></input>
+					<!--加-->
+					<view class='up' hover-class='button-hover' bindtap='addNumber'>
+						<text>+</text>
+					</view>
+				</view>
+			</view>
+		</scroll-view>
+		<view class='box-btn' bindtap='cartBoxClick'>确定</view>
+	</view>
+	
+</view>

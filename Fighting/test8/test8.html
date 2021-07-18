@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+  }
+  .shine {
+    background-color: red;
+    background-image: url(ditu.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 155px;
+    height: 155px;
+    position: absolute;
+    animation: opacity_change 1s ease-in-out infinite;
+
+    /* -webkit-animation: opacity_change 1s ease-in-out infinite;
+    -moz-animation:  opacity_change 1s ease-in-out infinite;
+    -o-animation:  opacity_change 1s ease-in-out infinite; */
+}
+.shine2 {
+  animation: opacity_change 1.75s ease-in-out infinite;
+    -webkit-animation: opacity_change 1.75s ease-in-out infinite;
+    -moz-animation:  opacity_change 1.75s ease-in-out infinite;
+    -o-animation:  opacity_change 1.75s ease-in-out infinite;
+}
+
+@keyframes opacity_change{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+@-webkit-keyframes opacity_change{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+@-moz-keyframes opacity_change{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@-o-keyframes opacity_change{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+</style>
+<body>
+<div class="shine shine2"></div>
+</body>
+</html>

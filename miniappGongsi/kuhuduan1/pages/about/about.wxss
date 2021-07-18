@@ -1,0 +1,17 @@
+.img {
+    width: 200rpx;
+    margin: 40rpx auto 20rpx auto;
+}
+
+.img > image {
+    width: 170rpx;
+    height: 170rpx;
+    border-radius: 50%;
+}
+
+.content {
+    width: 100%;
+    padding: 10rpx 40rpx;
+    box-sizing: border-box;
+    text-indent: 2em;
+}

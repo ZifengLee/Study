@@ -1,0 +1,35 @@
+/* 登录 */
+
+.loginAll {
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #eee;
+}
+
+.login {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+}
+
+.header1 {
+    text-align: center;
+}
+
+.content {
+    font-size: 30rpx;
+    margin: 50rpx 0;
+    color: #000;
+}
+
+.bottom {
+    font-size: 30rpx;
+    font-weight: 100;
+}

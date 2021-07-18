@@ -1,0 +1,26 @@
+<view class="title">商户端登录</view>
+<view class="login_detail">
+		<view class="count_num">账号</view>
+		<view class="count">
+				<image src='../../images/zhanghao.png' />
+				<input value="{{login_name}}" bindinput="usernameInput"></input>
+		</view>
+</view>
+<view class="login_detail">
+		<view class="count_num">密码</view>
+		<view class="count">
+				<image src='../../images/mima.png' />
+				<input password type="text" password="{{flag}}" value="{{password}}" bindinput="passwordInput"></input>
+				<view bindtap="hidePassword" style="position:absolute;right:0;z-index:100;">
+						<view wx:if="{{flag===true}}">
+								<image src='../../images/yanjing_bi.png' />
+						</view>
+						<view wx:else>
+								<image src='../../images/yanjing.png' />
+						</view>
+				</view>
+		</view>
+</view>
+<view class="submit">
+		<button bindtap="login" style="width:500rpx; font-weight: 100;">立即登录</button>
+</view>

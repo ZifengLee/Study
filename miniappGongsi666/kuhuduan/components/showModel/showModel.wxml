@@ -1,0 +1,15 @@
+<view class="model" wx:if='{{showModal}}'></view>
+<view class="modalDlg" wx:if='{{showModal}}'>
+  <view class='windowRow'>
+    <text class='userTitle'>填写</text>
+  </view>
+  <view class='wishName'>
+    <input name="inputValue" bindinput='wish_put' bindconfirm="ok" maxlength="11" type="number" placeholder='请输入取货电话号' class='wish_put' value="{{inputValue}}"></input>
+  </view>
+  <view class='wishbnt'>
+    <view class='wishbnt_bt' style="border-right: 2rpx solid #eee;color: #333;" bindtap='back'>
+      取消
+    </view>
+    <view class='wishbnt_bt' style="color: blue;" bindtap='ok'>确定</view>
+  </view>
+</view>

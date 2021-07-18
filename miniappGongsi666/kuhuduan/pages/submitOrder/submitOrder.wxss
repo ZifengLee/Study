@@ -1,0 +1,203 @@
+/* 内容整块 */
+
+.main {
+    padding: 20rpx;
+    padding-bottom: 120rpx;
+    font-size: 30rpx;
+}
+
+.box {
+    padding: 0 20rpx 20rpx;
+    margin-bottom: 30rpx;
+    box-shadow: 0 0 10rpx #C2C2C2;
+    border-radius: 20rpx;
+}
+
+.address-detail {
+    display: flex;
+    align-items: center;
+    padding: 10rpx 0;
+    margin: 10rpx 0;
+}
+
+.address-person {
+    display: flex;
+    justify-content: space-between;
+    padding: 10rpx 0;
+}
+
+.address-person-image {
+    width: 73rpx;
+    height: 66rpx;
+}
+
+.address-person-input {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.address-person-image1 {
+    width: 50rpx;
+    height: 50rpx;
+    flex-basis: 50rpx;
+}
+
+.col9 {
+    margin-bottom: 10rpx;
+}
+
+.shangjia {
+    border-right: 2rpx solid #333;
+    padding: 0 40rpx;
+    margin: 0 20rpx;
+    text-align: center;
+}
+
+
+/* 商品信息 */
+
+.goods {
+    padding: 0 20rpx 20rpx;
+    margin: 30rpx 0;
+    box-shadow: 0 0 8rpx #ececec;
+}
+
+view[class^="goods-"] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8rpx 0;
+}
+
+.storeName {
+    font-weight: bold;
+    padding-top: 10rpx;
+    padding-bottom: 10rpx;
+}
+
+.info {
+    padding: 20rpx 0;
+    border-bottom: 2rpx solid #C2C2C2;
+    display: flex;
+}
+
+.info-image {
+    width: 100rpx;
+    height: 100rpx;
+    margin: 20rpx;
+}
+
+.info-guige {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    width: calc(100% - 155rpx);
+    margin-right: 15rpx;
+}
+
+.info-guige>view {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.money {
+    padding: 14rpx 0;
+}
+
+.moneyg {
+    padding: 6rpx 0;
+}
+
+.goods-all {
+    padding: 20rpx 0;
+    border-bottom: 2rpx solid #333;
+    color: red;
+}
+
+.goods-have {
+    padding: 6rpx 0;
+}
+
+.goods-real {
+    padding-top: 20rpx;
+    color: red;
+}
+
+
+/* 备注 */
+
+.remarks {
+    box-shadow: 0 0 8rpx #ececec;
+    border-radius: 12rpx;
+}
+
+.box textarea {
+    height: 150rpx;
+    padding-top: 10rpx;
+}
+
+
+/* 吸底 */
+
+.submit {
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30rpx;
+    box-shadow: 0 0 4rpx #d5d5d5;
+    background-color: #fff;
+    height: 100rpx;
+}
+
+.submit text {
+    color: red;
+    font-size: 38rpx;
+    margin-left: 20rpx;
+    font-weight: bold;
+}
+
+.submit button {
+    border: 0;
+    outline: 0;
+    padding: 20rpx 0;
+    background-color: #ff0303;
+    border-radius: 0;
+    font-weight: 100;
+    color: #fff;
+    font-size: 30rpx;
+    height: 100%;
+}
+
+picker-view {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #FFF;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 45%;
+    border-radius: 30rpx 30rpx 0 0;
+}
+
+picker-view-column {
+    border-radius: 30rpx 30rpx 0 0;
+    color: #444444;
+    font-size: 28rpx;
+}
+
+.pickerCol {
+    width: 50%;
+    height: 96rpx;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(to right, #FBFBFB, #FFAC30, #FBFBFB) 1 1;
+    margin-left: 25%;
+}

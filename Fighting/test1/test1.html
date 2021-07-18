@@ -1,23 +1,101 @@
 <!DOCTYPE html>
+<!-- !:表申明的意思。这一行代码的意思是：下面的文档标签将以HTML5规范去解析 -->
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="stylesheet" href="test1.css" />
-        <title>test1</title>
-    </head>
+<!-- 头部，主要用来完成一个网页的相关设置的 -->
 
-    <body>
-        <div id="tishi"></div>
+<head>
+    <!-- meta：元，主要用来完成对应设置的 -->
+    <!-- 汉字编码 -->
+    <meta charset="UTF-8" />
+    <!-- 移动端开发设置 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 设置一个网页的搜索关键字 -->
+    <meta name="keywords" content="我的网页" />
+    <!-- 设置网站的描述内容 -->
+    <meta name="description" content="这是一个用于运算的网页" />
+    <!-- 设置网站的小图标 -->
+    <link
+        href="https://cdn2.jianshu.io/assets/favicons/favicon-e743bfb1821442341c3ab15bdbe804f7ad97676bd07a770ccc9483473aa76f06.ico"
+        rel="shortcut icon" type="image/x-icon">
+    <!-- 网站的标题 -->
+    <title>test1</title>
+    <style>
+        /* 书写样式的地方 */
+    </style>
+    <!-- 引入外部样式文件 -->
+    <link rel="stylesheet" href="test1.css" />
+</head>
+<!-- 主体部分 -->
 
-        <input id="sValue" type="number" />
+<body>
+    <!-- div:用来布局的，没有具体含义。层 -->
+    <div id="tishi"></div>
+    <!-- 文本格式化标签：就是通过标签来美化文本外观 -->
+    <!-- b和strong：都有加粗作用，且都是行级标签（不会自动换行），但strong除了加粗还有强调作用。-->
+    <!-- pre：预格式文本标签，在文本中会保留空格和换行符，包括宽度等。 -->
+    <pre>我 好
+        开心  开心！
+    </pre>
+    <!-- 块级元素（相当于执行了display:block;操作）：独占一行；宽度和高度是可控的；如果没有设置其宽度，将默认铺满整行；其内可以包含块级元素和行级元素-->
+    <div>div标签</div>
+    <p>p标签</p>
+    <!-- 行内元素（相当于执行了display:inline;操作）：不会独占一行，与相邻的行级元素占同一行，直到行占满，会自动掉到下一行；宽度和高度是不可控的；其内只能包含行级元素，不能包含块级元素 -->
+    <span>行内标签</span>
+    <!-- 语义化标签 -->
+    <!--a标签：存放超链接 -->
+    <a href="http://baidu.com" title="百度"><img src="../../miniappFirst/kuhuduan/images/bianji.png" alt="图片无法加载"></a>
+    <!-- p标签；存放段落 -->
+    <p>我是段落</p>
+    <!-- q标签：短文本引用，注意要引用的文本不要加双引号，浏览器会对q标签自动添加双引号 -->
+    <q>《你是人间四月天</q>
+    <!-- address标签：为网页加入地址信息 -->
+    <address>
+        <p>电话：13296856352</p>
+        <p>地址：江西省丰城市铁路镇</p>
+    </address>
+    <!-- id：给标签取一个标识名 -->
+    <p id="p1">段落1</p>
+    <p id="p2">段落2</p>
+    <!-- class：给一个标签取一个类名 -->
+    <div class="test">div</div>
+    <p class="test">p</p>
+    <!-- style:用来设置当前标签的样式，也叫行内样式 -->
+    <table border="1" width="400" cellspacing="0" cellpadding="10" align="center">
+        <!--tr：行 -->
+        <tr>
+            <!--th：表头 ，内容会自动加粗和居中显示-->
+            <th>内容1</th>
+            <th>内容2</th>
+            <th>内容3</th>
+        </tr>
+        <tr>
+            <!--td：列 -->
+            <td>内容1</td>
+            <td>内容2</td>
+            <td>内容3</td>
+        </tr>
+    </table>
+    <form action="">
+        <label for="course">课程：</label>
+        <select id="course" multiple size="2">
+            <option value="chinese">语文</option>
+            <option value="math">数学</option>
+            <option value="computer">计算机</option>
+        </select>
+    </form>
+    <!-- hx:标题，从1级到6级，1级标题最大，6级最小，会自动加粗，有默认字号 -->
+    <input id="sValue" type="number" />
+    <input id="btn1" type="button" value="确认" />
+    <input id="btn2" type="button" value="进行运算" />
+    <div id="result1"></div>
+    <div id="result2"></div>
+    <div id="result3"></div>
+</body>
 
-        <input id="btn1" type="button" value="确认" />
+<script>
+        // 书写逻辑代码的地方
+</script>
+<!-- 引入外部逻辑代码文件-->
+<script src="test1.js"></script>
 
-        <input id="btn2" type="button" value="进行运算" />
-        <div id="result1"></div>
-        <div id="result2"></div>
-        <div id="result3"></div>
-
-        <script src="test1.js"></script>
-    </body>
 </html>

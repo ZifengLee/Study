@@ -1,0 +1,35 @@
+<view style="font-size: 34rpx;">
+		<view style="margin-left: 40rpx;margin-top: 40rpx;">{{merchantId}}商户</view>
+		<view class="integra1_detail">
+				<input style="text-align: right;margin-right: 40rpx;" placeholder="请输入付款金额" bindinput="setInput" value="{{inputValue}}" type="number"></input>
+		</view>
+		<view style="margin-left: 40rpx;">现有现金券：{{money}}</view>
+		<view class="submit">
+				<view class="btn" bindtap='showMask'>确认支付</view>
+		</view>
+</view>
+<!-- 遮罩层 -->
+<view class="mask" hidden="{{flag}}" style="width:100%;height:100%;">
+		<view class="tishiContant">
+				<view class="queding_img">
+						<image src='../../images/success.png' />
+				</view>
+				<view class="tishiType">支付成功</view>
+		</view>
+		<!-- 翻牌部分 -->
+		<view class="flopGame">
+				<image class="bg_image" src="../../images/lucky/trans.png" />
+				<view>
+						<view class="card-module {{cardState}}">
+								<view class="card " wx:for="{{cardData}}" wx:key="id" animation="{{item.ani?animation:null}}">
+										<view wx:if="{{item.status === 2||item.status === 3}}" style="position: absolute;top: 20rpx;left: 43rpx;color: #C0641F;">
+												{{item.money}}元
+										</view>
+										<image bindtap="choujiang" id="{{item.id}}" wx:if="{{item.status === 1}}" src="../../images/lucky/turn.png" />
+										<image wx:if="{{item.status === 2}}" src="../../images/lucky/first.png" />
+										<image wx:if="{{item.status === 3}}" src="../../images/lucky/after.png" />
+								</view>
+						</view>
+				</view>
+		</view>
+</view>

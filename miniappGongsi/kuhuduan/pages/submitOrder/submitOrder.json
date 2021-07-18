@@ -1,6 +1,0 @@
-{
-    "navigationBarTitleText": "提交订单",
-    "usingComponents": {
-        "showModel": "/components/showModel/showModel"
-    }
-}

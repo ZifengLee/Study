@@ -1,0 +1,80 @@
+<import src="../../components/wxParse/wxParse.wxml" />
+<form catchsubmit="formSubmit" catchreset="formReset">
+	<view class="main">
+		<view class="contain">
+			<view class="input">
+				<label>
+					<span style="color:red;">*</span>
+					商品名称:
+				</label>
+				<input class="content" name="goods_name" placeholder="请填写商品名称" value="{{goods_name}}" />
+			</view>
+			<view class="input">
+				<label>
+					<span style="color:red;">*</span>
+					商品规格:
+				</label>
+				<input class="content" name="goods_size" placeholder="请填写商品规格" value="{{goods_size}}" />
+			</view>
+			<view class="input">
+				<label>
+					<span style="color:red;">*</span>
+					商品标价:
+				</label>
+				<input class="content" name="marked_price" type="number" placeholder="请填写商品标价" value="{{marked_price}}" />
+			</view>
+			<view class="input">
+				<label>
+					<span style="color:red;">*</span>
+					商品实价:
+				</label>
+				<input class="content" name="net_price" type="number" placeholder="请填写商品实价" value="{{net_price}}" />
+			</view>
+			<view class="input">
+				<label>
+					<span style="color:red;">*</span>
+					商品单位:
+				</label>
+				<input class="content" name="goods_unit" placeholder="请填写商品单位" value="{{goods_unit}}" />
+			</view>
+			<view class="input">
+				<label>
+					<span style="color:red;">*</span>
+					商品数量:
+				</label>
+				<input class="content" name="goods_number" type="number" placeholder="请填写商品数量" tel="true" value="{{goods_number}}" />
+			</view>
+			<view class="input">
+				<label>
+					<span style="color:red;">*</span>
+					商品分类:
+				</label>
+				<input class="content" name="categories" placeholder="请填写商品分类" value="{{categories}}" />
+			</view>
+			<view class="input">
+				<label>
+					<span style="color:red;">*</span>
+					商品主图
+				</label>
+				<!-- 上传商品主图 -->
+				<view>
+					<block>
+						<upload files="{{imageShangpu}}" maxFileCount="{{maxFileCount}}" bindfiles="onimageShangpuFilesChange" />
+						<view style="font-size: 30rpx;padding-right: 20rpx;color: gray;">上传图片</view>
+					</block>
+				</view>
+			</view>
+			<view id="editorContain">
+				<label>
+					<span style="color:red;">*</span>
+					商品详情
+				</label>
+				<editor id="editor" class="ql-container" placeholder="{{placeholder}}" bindstatuschange="onStatusChange" bindready="onEditorReady">
+				</editor>
+			</view>
+		</view>
+	</view>
+	<view class="submit">
+		<button formType="submit">提交</button>
+	</view>
+</form>

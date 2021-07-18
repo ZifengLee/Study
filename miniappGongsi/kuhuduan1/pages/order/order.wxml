@@ -1,0 +1,77 @@
+<view class="container content">
+    <!-- 订单类型 -->
+    <view id="fenlei">
+        <view id="fenlei_content">
+            <view catchtap="getList" data-value="120" class="{{flagValue == 120 ? 'active' : ''}}">
+                <image src="../../images/daifukuan.png"></image>
+                <view>待付款</view>
+            </view>
+            <view catchtap="getList" data-value="121" class="{{flagValue == 121 ? 'active' : ''}}">
+                <image src="../../images/yifukuan.png"></image>
+                <text>已付款</text>
+            </view>
+            <view catchtap="getList" data-value="122" class="{{flagValue == 122 ? 'active' : ''}}">
+                <image src="../../images/daishouhuo.png"></image>
+                <text>待收货</text>
+            </view>
+            <view catchtap="getList" data-value="124" class="{{flagValue == 124 ? 'active' : ''}}">
+                <image src="../../images/yiwancheng.png"></image>
+                <text>已完成</text>
+            </view>
+        </view>
+    </view>
+    <!-- 订单列表 -->
+    <scroll-view class="height100" scroll-y="true" bindscrolltolower="scrollToLower">
+        <view class="order_item" wx:for="{{orderList}}" wx:key="key" data-item="{{item}}" catchtap="goToOrderDetail">
+            <view class="order_title">
+                <view class="order_flag">{{item.flag}}</view>
+            </view>
+            <view class="order_img">
+                <view>
+                    <view wx:for="{{item.commodity}}" wx:key="key">
+                        <image class="img" wx:if="{{index < 3}}" src="{{imgBaseUrl + item.commodity.image}}"></image>
+                        <image class="img" wx:if="{{index === 3}}" src="../../image/hasMore.png"></image>
+                    </view>
+                </view>
+                <text style="margin-right:20rpx;">共{{item.count}}件</text>
+            </view>
+            <view class="order_price">
+                <text>实付款￥{{item.actually_amount}}</text>
+            </view>
+            <view class="btn" wx:if="{{flagValue==120}}">
+                <button type="warn" size="mini" plain catchtap="showMask" data-id="{{item.id}}" data-type="1">
+                    取消订单
+                </button>
+                <button type="warn" size="mini" catchtap="payment" data-id="{{item.id}}">
+                    去支付
+                </button>
+            </view>
+            <view class="btn" wx:if="{{flagValue==122}}">
+                <button type="warn" size="mini" catchtap="showMask" data-item="{{item}}" data-id="{{item.id}}" type="2">
+                    确认收货
+                </button>
+            </view>
+        </view>
+        <view class="loadmore">没有更多内容了</view>
+    </scroll-view>
+</view>
+<!-- 确认自提遮罩层 -->
+<view id="mask" hidden="{{flag}}">
+    <view wx:if="{{type===1}}" id="bgc">
+        <!-- <view id="bgc"> -->
+        <view id="maskCenter">温馨提示</view>
+        <view id="center">是否取消此订单！</view>
+        <view id="button">
+            <view catchtap="closeMask">取消</view>
+            <view catchtap="closeOrder">确认</view>
+        </view>
+    </view>
+    <view wx:if="{{type===2}}" id="bgc">
+        <view id="maskCenter">温馨提示</view>
+        <view id="center">是否确认订单已收货！</view>
+        <view id="button">
+            <view catchtap="closeMask">取消</view>
+            <view catchtap="finishOrder">确认</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,68 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/login/login",
+        "pages/goods/goods",
+        "pages/search/search",
+        "pages/goodsDetails/goodsDetails",
+        "pages/order/order",
+        "pages/orderDetail/orderDetail",
+        "pages/submitOrder/submitOrder",
+        "pages/my/my",
+        "pages/cashCoupons/cashCoupons",
+        "pages/zitidian/zitidian",
+        "pages/cart/cart",
+        "pages/set/set",
+        "pages/about/about",
+        "pages/payment/payment"
+    ],
+
+    "window": {
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#ff0303",
+        "navigationBarTextStyle": "white",
+        "navigationBarTitleText": "客户端",
+        "enablePullDownRefresh": true,
+        "backgroundColor": "#fff"
+    },
+
+    "sitemapLocation": "sitemap.json",
+    "tabBar": {
+        "color": "#7A7E83",
+        "selectedColor": "#ff0303",
+        "borderStyle": "black",
+        "backgroundColor": "#ffffff",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "selectedIconPath": "images/index.png",
+                "iconPath": "images/unindex.png",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/goods/goods",
+                "selectedIconPath": "images/goods.png",
+                "iconPath": "images/ungoods.png",
+                "text": "商品"
+            },
+            {
+                "pagePath": "pages/order/order",
+                "selectedIconPath": "images/order.png",
+                "iconPath": "images/unorder.png",
+                "text": "订单"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "selectedIconPath": "images/my.png",
+                "iconPath": "images/unmy.png",
+                "text": "我的"
+            }
+        ]
+    },
+
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于小程序定位"
+        }
+    }
+}

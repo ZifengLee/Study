@@ -1,0 +1,32 @@
+<view class="main">
+	<view class="contain">
+		<view class="touxiang">
+			<view>店铺图片</view>
+			<view class="people_img">
+				<image src='{{imgbaseUrl+merchant.image}}' />
+			</view>
+		</view>
+		<view class="detail">
+			<view>店铺名称：</view>
+			<view>{{merchant.merchant_name}}</view>
+		</view>
+		<view class="detail">
+			<view>店铺电话：</view>
+			<view>{{merchant.mobile_phone}}</view>
+		</view>
+		<view class="detail">
+			<view>店铺地址：</view>
+			<view>{{merchant.address}}</view>
+		</view>
+		<view class="detail" bindtap="goToChangePassword" style="display: flex;justify-content: space-between;">
+			<view>
+				<view>登录密码： 点击修改</view>
+			</view>
+			<image src="../../images/jiantou1.png" />
+		</view>
+	</view>
+</view>
+
+<view class="tishi">
+	如需更改请联系公司
+</view>

@@ -1,0 +1,37 @@
+<view class="head">
+		<view class="loginAll">
+				<view class="login">
+						<view wx:if="{{canIUse}}">
+								<view class='header1'>
+										<image src='../../images/logo.jpg'></image>
+								</view>
+								<view class='content'>
+										<view>申请获取以下权限</view>
+										<text>获得你的公开信息(昵称，头像等)</text>
+								</view>
+								<button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo" disabled="{{isDisabled}}">
+										授权登录
+								</button>
+								<view class="shuoming">
+										<checkbox-group class="group" bindchange="checkboxChange1">
+												<view class="label-1">
+														<label>
+																<checkbox hidden value="{{checkboxItems.name}}" checked="{{checkboxItems.checked}}"></checkbox>
+																<view class="label-1__icon">
+																		<view class="label-1__icon-checked" style="opacity:{{checkboxItems.checked ? 1: 0}}"></view>
+																</view>
+														</label>
+														<text class="label-1__text">{{checkboxItems.value}}</text>
+														<text class="label-2__text" style="color:#7171C6" bindtap="modalTap">【用户注册隐私协议】</text>
+														以及
+														<text class="label-2__text" style="color:#7171C6" bindtap="goToService">
+																【用户平台服务协议】
+														</text>
+												</view>
+										</checkbox-group>
+								</view>
+						</view>
+						<view wx:else>请升级微信版本</view>
+				</view>
+		</view>
+</view>

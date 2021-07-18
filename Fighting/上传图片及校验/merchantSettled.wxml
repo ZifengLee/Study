@@ -1,0 +1,119 @@
+<form catchsubmit="formSubmit" catchreset="formReset">
+		<view class="main">
+				<view class="title">基础信息</view>
+				<view class="contain">
+						<view class="input">
+								<label>
+										<span style="color:red;">*</span>
+										商铺名称:
+								</label>
+								<input class="content" name="merchant_name" placeholder="请填写" value="{{merchant_name}}" />
+						</view>
+						<view class="input">
+								<label>
+										<span style="color:red;">*</span>
+										商铺地址:
+								</label>
+								<view class="content" bindtap="goToMap" name="address" style="text-align: left;">
+										{{'请点击选择'}}
+								</view>
+						</view>
+						<view class="input">
+								<label>
+										<span style="color:red;">*</span>
+										商铺电话:
+								</label>
+								<input class="content" name="mobile_phone" type="number" placeholder="请填写" tel="true" value="{{mobile_phone}}" />
+						</view>
+						<view class="input">
+								<label>
+										<span style="color:red;">*</span>
+										店主名称:
+								</label>
+								<input class="content" name="name" placeholder="请填写" value="{{name}}" />
+						</view>
+						<view class="input">
+								<label>
+										<span style="color:red;">*</span>
+										商铺图片
+								</label>
+								<!-- 上传商铺图片 -->
+								<view>
+										<block>
+												<upload files="{{imageShangpu}}" maxFileCount="{{maxFileCount}}" bindfiles="onimageShangpuFilesChange" />
+												<view style="font-size: 30rpx;padding-right: 20rpx;color: gray;">上传图片</view>
+										</block>
+								</view>
+						</view>
+				</view>
+				<view class="title">证件信息</view>
+				<view class="contain">
+						<view class="input">
+								<label>
+										<span style="color:red;">*</span>
+										店主证件照
+								</label>
+								<!-- 上传店主证件照 -->
+								<view>
+										<block>
+												<upload files="{{imageDianzhuzheng}}" maxFileCount="{{maxFileCount}}" bindfiles="onimageDianzhuzhengFilesChange" />
+												<view style="font-size: 30rpx;padding-right: 20rpx;color: gray;">正面照</view>
+										</block>
+								</view>
+								<view>
+										<block>
+												<upload files="{{imageDianzhufan}}" maxFileCount="{{maxFileCount}}" bindfiles="onimageDianzhufanFilesChange" />
+												<view style="font-size: 30rpx;padding-right: 20rpx;color: gray;">反面照</view>
+										</block>
+								</view>
+						</view>
+						<view class="input">
+								<label>
+										<span style="color:red;">*</span>
+										营业执照
+								</label>
+								<!-- 上传营业执照 -->
+								<view>
+										<block>
+												<upload files="{{imageYingyezhao}}" maxFileCount="{{maxFileCount}}" bindfiles="onimageYingyezhaoFilesChange" />
+												<view style="font-size: 30rpx;padding-right: 20rpx;color: gray;">上传图片</view>
+										</block>
+								</view>
+						</view>
+				</view>
+				<view class="title">银行卡信息</view>
+				<view class="contain">
+						<view class="input">
+								<label>
+										<span style="color:red;">*</span>
+										卡主姓名:
+								</label>
+								<input class="content" name="card_name" placeholder="{{card_name==''? '请填写' : card_name}}" />
+						</view>
+						<view class="input">
+								<label>
+										<span style="color:red;">*</span>
+										银行名称:
+								</label>
+								<input class="content" name="bank" placeholder="{{bank==''? '请填写' : bank}}" />
+						</view>
+						<view class="input">
+								<label>
+										<span style="color:red;">*</span>
+										开户银行:
+								</label>
+								<input class="content" name="bank_name" placeholder="{{bank_name==''? '请填写' : bank_name}}" />
+						</view>
+						<view class="input">
+								<label>
+										<span style="color:red;">*</span>
+										银行卡号:
+								</label>
+								<input class="content" name="card_code" type="number" placeholder="{{card_code==''? '请填写' : card_code}}" />
+						</view>
+				</view>
+		</view>
+		<view class="submit">
+				<button formType="submit">提交申请</button>
+		</view>
+</form>

@@ -1,0 +1,57 @@
+.jifen {
+    width: 100%;
+    height: 240rpx;
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.jifen > image {
+    width: 100%;
+    height: 240rpx;
+}
+
+.jifen > text {
+    position: absolute;
+    top: 65rpx;
+    font-size: 60rpx;
+}
+
+.jifen > text:last-child {
+    position: absolute;
+    top: 150rpx;
+    font-size: 30rpx;
+}
+
+#scroll {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 240rpx;
+}
+
+.jifen_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1rpx solid #b7b7b7;
+    padding: 30rpx 0;
+    font-size: 28rpx;
+    overflow: hidden;
+}
+
+.jifen_item > view {
+    display: flex;
+    flex-direction: column;
+}
+
+.jifen_item > view > text:first-child {
+    font-size: 32rpx;
+}
+
+.jifen_item > view > text:last-child {
+    color: #797979;
+    margin-top: 10rpx;
+}

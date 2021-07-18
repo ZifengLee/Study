@@ -1,0 +1,3 @@
+	<view>手机号：</view>
+	<input class="address-person-input" disabled type="tel" placeholder="请输入手机号" catchtap="changeCustomerInfoMobilePhone" value="{{mobile_phone}}" />
+    <showModel id="showModal" bindshowModalSuccess="bindshowModalSuccess" showModal="{{showModal}}" show="{{mobile_phone}}"></showModel>

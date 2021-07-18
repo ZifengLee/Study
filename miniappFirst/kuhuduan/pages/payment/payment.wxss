@@ -1,0 +1,116 @@
+ .integra1_detail {
+   margin: 20rpx 40rpx;
+   display: flex;
+   justify-content: flex-end;
+   height: 130rpx;
+   align-items: center;
+   border-radius: 20rpx;
+   background-color: #D6D6D6;
+ }
+
+ .input {
+   display: flex;
+   margin-right: 40rpx;
+   font-size: 34rpx;
+ }
+
+ .submit {
+   display: flex;
+   justify-content: center;
+   margin-top: 140rpx;
+ }
+
+ .btn {
+   background-color: #ff0303;
+   width: 350rpx;
+   font-weight: 549;
+   height: 60rpx;
+   padding-top: 20rpx;
+   text-align: center;
+   border-radius: 40rpx;
+   color: white;
+   letter-spacing: 15rpx;
+ }
+
+ .submit button {
+   color: white;
+   background-color: #039BFF;
+   border-radius: 60rpx;
+ }
+
+ .tishiContant {
+   padding: 210rpx 20rpx;
+ }
+
+ .queding_img image {
+   width: 130rpx;
+   height: 130rpx;
+   padding: 0 280rpx;
+   padding-top: 30rpx;
+ }
+
+ .tishiType {
+   text-align: center;
+   font-size: 48rpx;
+   /* font-weight: bold; */
+   margin-top: 30rpx;
+ }
+
+ .tishi {
+   text-align: center;
+   margin: 50rpx auto;
+   font-size: 30rpx;
+   width: 580rpx;
+ }
+
+ /* 设置背景遮罩层样式 */
+ .mask {
+   position: fixed;
+   left: 0;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   background: white;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   z-index: 9999999;
+ }
+
+ /* 翻牌部分 */
+.flopGame{
+  position: absolute;
+  top: 45%;
+}
+
+.bg_image{
+  z-index: -1;
+  width:730rpx;
+  height:590rpx;
+}
+
+.flopGame>view{
+  width:100%;
+  display: flex;
+  justify-content: center;
+}
+
+.card-module{
+  position: absolute;
+  top: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  width: 80%;
+  height: 380rpx;
+}
+
+.card{
+  position: relative;
+}
+
+.card image{
+  width:135rpx;
+  height:177rpx;
+  margin: 5rpx 7rpx;
+}

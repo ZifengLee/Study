@@ -1,0 +1,53 @@
+<view class="contain">
+    <view id="top">
+        <!-- 搜索区域 -->
+        <view class="sy">
+            <view class="search">
+                <view class="searchView">
+                    <image src="../../images/search.png" />
+                    <view bindtap="gosearch" class="user-search">输入您想购买的物品名称</view>
+                </view>
+            </view>
+        </view>
+        <!-- 搜索区域结束 -->
+        <!-- 店面卡片区域 -->
+        <view class="card">
+            <view class="card-content">
+                <view class="title">{{name}}</view>
+                <view class="jianhjie">
+                    <image src="{{imgBaseUrl + image}}"></image>
+                    <view>
+                        <view>{{address}}</view>
+                        <view>
+                            已有会员
+                            <span style="color:red">{{number}}</span>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 店面卡片区域结束 -->
+    <!-- 商品展示开始 -->
+    <view id="scroll">
+        <scroll-view scroll-y="true" style="height:67%;position: absolute;" bindscrolltolower="scrolltolower" wx:if="{{goodsList.length!==0}}">
+            <view class="goods_content">
+                <view class="goods" wx:for="{{goodsList}}" wx:key="key" catchtap="goodDetail" data-id="{{item.id}}">
+                    <image class="goods_img" src="{{ imgBaseUrl + item.image }}"></image>
+                    <view class="goods_title">{{item.name}}</view>
+                    <view class="goods_price">
+                        <view class="price_content">
+                            <view>
+                                ￥
+                                <text class="price_new">{{item.actual_price}}</text>
+                            </view>
+                            <view class="price_old">￥{{item.bid_price}}</view>
+                        </view>
+                        <button type="warn" size="mini" class="goods_btn">查看详情</button>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+        <view class="merchant" wx:else>没有搜索到相关商品哦~</view>
+    </view>
+</view>

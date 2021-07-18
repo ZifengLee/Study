@@ -1,0 +1,8 @@
+ <form action="">
+ 	<label for="course">课程：</label>
+ 	<select id="course" multiple size="2">
+ 		<option value="chinese">语文</option>
+ 		<option value="math">数学</option>
+ 		<option value="computer">计算机</option>
+ 	</select>
+ </form>

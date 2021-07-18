@@ -1,0 +1,25 @@
+.title {
+    text-align: center;
+}
+
+.button {
+    width: 450px;
+    margin: 10px auto;
+}
+.button > button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    background-color: #eebb62ca;
+    box-shadow: 2px 2px 10px rgba(128, 128, 128, 0.657);
+    border-radius: 10px;
+    padding: 5px 12px;
+    margin-right: 10px;
+}
+
+.myCanvas {
+    display: block;
+    margin: 30px auto;
+    box-shadow: 2px 2px 10px gray;
+    background-color: #f0b245;
+}

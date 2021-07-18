@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "分类",
+  "navigationBarBackgroundColor": "#01ba45",
+  "usingComponents": {
+      "cartBox": "/components/cartBox/cartBox"
+  },
+  "enablePullDownRefresh": false
+  
+}

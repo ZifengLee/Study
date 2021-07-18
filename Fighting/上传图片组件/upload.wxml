@@ -1,0 +1,41 @@
+<!-- <view class="page__bd">
+  <view class="weui-cells">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <view class="weui-uploader">
+          <view class="weui-uploader__hd">
+            <view class="weui-uploader__title">宝贝作品&照片上传</view>
+            <view class="weui-uploader__info">{{files.length}}/{{maxFileCount}}</view>
+          </view>
+          <view class="weui-uploader__bd">
+            <view class="weui-uploader__files" id="uploaderFiles">
+              <block wx:for="{{files}}" wx:key="*this">
+                <view class="weui-uploader__file" bindlongpress="_deleteImage" data-index="{{index}}" bindtap="_previewImage" id="{{item.OrigionUrl}}">
+                  <image class="weui-uploader__img" src="{{item.ZoomUrl}}" mode="aspectFill" />
+                </view>
+              </block>
+            </view>
+            <view style='display:{{isCanAddFile?"":"none"}}' class="weui-uploader__input-box">
+              <view class="weui-uploader__input" bindtap="_chooseImage"></view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view> -->
+<view class="weui-uploader">
+  <view class="img-v weui-uploader__bd" name="card_picture">
+    <view class='pic' wx:for="{{files}}" wx:for-item="item" wx:key="*this">
+      <image class='weui-uploader__img ' src="{{imgbaseUrl+item}}" data-index="{{index}}" mode="aspectFill" bindtap="_previewImage" id="{{item.OrigionUrl}}">
+        <icon type='cancel' class="delete-btn" data-index="{{index}}" catchtap="deleteImg" />
+      </image>
+    </view>
+    <!-- 用来提示用户上传图片 -->
+    <view wx:if="{{isCanAddFile}}" class="weui-uploader__input-box pic" bindtap="_chooseImage">
+      <view class="weui-uploader__input">+</view>
+      <!-- <view style="font-size: 30rpx;text-align: center;color: gray;">上传图片</view> -->
+    </view>
+  </view>
+  <!-- <button class="upload-img-btn" bindtap="_chooseImage" type='primary'>拍照  / 上传</button> -->
+</view>

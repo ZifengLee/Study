@@ -1,0 +1,219 @@
+.contain {
+    margin-bottom: 90rpx;
+}
+
+/* 搜索栏样式 */
+.search {
+    width: 100%;
+    height: 120rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #039bff;
+}
+
+.searchView {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 94%;
+    height: 78rpx;
+    border: 1rpx solid #039bff;
+    border-radius: 45rpx;
+    color: #c4c2c2;
+    font-size: 30rpx;
+    background-color: white;
+}
+
+.searchView > image {
+    width: 50rpx;
+    height: 45rpx;
+    margin-left: 20rpx;
+}
+
+.user-search {
+    width: 100%;
+    margin-left: 32rpx;
+    font-size: 30rpx;
+}
+
+.searchView > text {
+    width: 120rpx;
+    border-left: 4rpx solid #039bff;
+    color: #039bff;
+    padding-left: 10px;
+}
+
+#scroll {
+    height: 100%;
+    padding-bottom: 200rpx;
+    margin-bottom: 200rpx;
+    overflow: hidden;
+}
+
+.contain2 {
+    padding: 20rpx;
+    padding-top: 30rpx;
+    padding-bottom: 0rpx;
+}
+
+.orderList {
+    box-shadow: 3rpx 3rpx 8rpx gray;
+    border-radius: 30rpx;
+    margin-bottom: 30rpx;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    padding: 30rpx 10rpx;
+}
+
+.colorR {
+    color: #ff8963;
+}
+
+.colorGray {
+    color: #646464;
+}
+
+.fs32 {
+    font-size: 32rpx;
+}
+
+.fs38 {
+    font-size: 38rpx;
+}
+
+.pt10 {
+    padding-top: 10rpx;
+}
+
+.pb10 {
+    padding-bottom: 10rpx;
+}
+
+.mb10 {
+    margin-bottom: 10rpx;
+}
+
+.personDetail {
+    display: flex;
+    border-bottom: 2rpx solid #eee;
+    padding: 30rpx 10rpx;
+    justify-content: space-between;
+}
+
+.personName {
+    display: flex;
+}
+
+.phone {
+    margin-left: 20rpx;
+}
+
+.call {
+    width: 44rpx;
+    height: 44rpx;
+}
+
+.orderNum {
+    display: flex;
+    justify-content: space-between;
+}
+
+.orderDetail {
+    padding: 30rpx 10rpx;
+}
+
+.btn {
+    background-color: #039bff;
+    color: white;
+    padding: 7rpx;
+    border-radius: 10rpx;
+}
+
+.confirm {
+    display: flex;
+    justify-content: flex-end;
+    padding: 22rpx 10rpx;
+    border-top: 1rpx solid #dfdfdf;
+}
+
+.plr {
+    padding-left: 24rpx;
+    padding-right: 24rpx;
+}
+
+.ptb {
+    padding-top: 10rpx;
+    padding-bottom: 10rpx;
+}
+
+.ptb1 {
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+}
+
+.noOrder {
+    width: 100%;
+    text-align: center;
+    margin-top: 108rpx;
+    font-size: 36rpx;
+    color: #646464;
+}
+
+/* 设置遮罩层样式 */
+#mask {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    background: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+#bgc {
+    width: 70%;
+    height: 370rpx;
+    background-color: white;
+    margin: auto;
+    margin-top: 400rpx;
+    border-radius: 20rpx;
+    position: relative;
+}
+
+#maskCenter {
+    text-align: center;
+    padding-top: 30rpx;
+    font-size: 40rpx;
+    padding-bottom: 30rpx;
+    border-bottom: 0.5px solid black;
+    font-weight: 560;
+}
+
+#center {
+    text-align: center;
+    line-height: 160rpx;
+    font-size: 36rpx;
+}
+
+#button {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    line-height: 110rpx;
+    border-top: 1rpx solid black;
+    font-size: 34rpx;
+}
+
+#button view:first-child {
+    border-right: 1rpx solid black;
+}
+
+#button view {
+    width: 50%;
+    text-align: center;
+}

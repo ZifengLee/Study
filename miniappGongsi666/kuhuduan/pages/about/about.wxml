@@ -1,0 +1,4 @@
+<view class="img">
+  <image src="../../images/logo.jpg"></image>
+</view>
+<view class="content">{{content}}</view>

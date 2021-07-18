@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>canvas画布学习</title>
+</head>
+<style type="text/css">
+.chessboard{
+    display:block;
+    margin:50px auto;
+}
+</style>
+
+<body>
+	<canvas id="mycanvas" width="450px" height="450px" class="chessboard"></canvas>
+</body>
+
+<script>
+     function drawChessBoard () {
+            var c=document.getElementById("mycanvas");
+                context=c.getContext("2d");
+                // context.strokeRect(15,15,100,100);
+                for(var i = 0; i < 16; i++){
+                    //垂直方向画15根，相距30px
+                    context.moveTo(15 + i * 30 , 15);
+                    context.lineTo(15 + i * 30 , 435);
+                    context.stroke();
+                    //水平方向画15根，相距30px
+                    context.moveTo(15 , 15 + i * 30);
+                    context.lineTo(435 , 15 + i * 30);
+                    context.stroke();
+                }
+            }
+            drawChessBoard();
+</script>
+</html>

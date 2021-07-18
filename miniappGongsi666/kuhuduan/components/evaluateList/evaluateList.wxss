@@ -1,0 +1,67 @@
+/* 评论 */
+
+.evaluate {
+    padding: 20rpx;
+    font-size: 28rpx;
+    border-bottom: 2rpx solid #eee;
+}
+
+.evaluate:last-child {
+    padding: 20rpx;
+    font-size: 28rpx;
+    border-bottom: 0;
+}
+
+.evaluate-person {
+    margin: 20rpx 0;
+    display: flex;
+    align-items: center;
+}
+
+.evaluate-person .evaluate-person-header {
+    flex-basis: 80rpx;
+    border-radius: 50%;
+    background-color: #999;
+    overflow: hidden;
+}
+
+.evaluate-person .evaluate-person-username {
+    margin: 0 20rpx;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.evaluate-person-image {
+    flex-basis: 260rpx;
+}
+
+.evaluate-person-image .evaluate-star {
+    width: 24rpx;
+    height: 24rpx;
+    margin-right: 6rpx;
+}
+
+.evaluate-content {
+    color: #999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.evaluate-imageList {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    /* flex-flow: column; */
+    /* justify-content: space-between; */
+}
+
+.evaluate-image {
+    flex: 0 0 30%;
+    margin: 10rpx;
+    height: 200rpx;
+}

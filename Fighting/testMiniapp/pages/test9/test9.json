@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "弹窗实验",
+  "usingComponents": {
+      "showModel": "/components/showModel/showModel"
+  }
+}

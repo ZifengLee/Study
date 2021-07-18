@@ -1,0 +1,54 @@
+<view class="content">
+		<view wx:for="{{carts}}" data-index="{{index}}" wx:key="key" style="width:100%;position:relative;">
+				<view class="carts-item" style="{{item.txtStyle}}" data-index="{{index}}" bindtouchstart='touchstart' bindtouchmove='touchmove' bindtouchend='touchend'>
+						<!-- 复选框图标 -->
+						<icon wx:if="{{item.selected}}" type="success_circle" size="20" bindtap="bindCheckbox" data-index="{{index}}" />
+						<icon wx:else type="circle" size="20" bindtap="bindCheckbox" data-index="{{index}}" />
+						<!-- 图片 -->
+						<view>
+								<image class="carts-image" src="{{ imgBaseUrl + item.image }}" mode="aspectFill" />
+						</view>
+						<!-- 标题 -->
+						<view class="carts-text">
+								<text class="carts-title">{{item.name}}</text>
+								<view class="carts-subtitle">
+										<view class="carts-price">
+												<view class="price_new">
+														<span style="font-size:32rpx;">￥</span>
+														{{item.actual_price}}
+												</view>
+												<view class="price_old">￥{{item.bid_price}}</view>
+										</view>
+										<view class="stepper">
+												<!-- 减号 -->
+												<text data-index="{{index}}" catchtap="bindMinus">-</text>
+												<!-- 数值 -->
+												<input type="number" value="{{item.number}}" />
+												<!-- 加号 -->
+												<text data-index="{{index}}" catchtap="bindPlus">+</text>
+										</view>
+								</view>
+						</view>
+				</view>
+				<!-- 删除按钮 -->
+				<view class="del {{delIndex === index?'zindex':''}}" data-index="{{index}}" data-id="{{item.id}}" catchtap="del">
+						删除
+				</view>
+		</view>
+</view>
+<!-- 底部全选结算区域 -->
+<view class="carts-footer">
+		<view bindtap="bindSelectAll">
+				<icon wx:if="{{selectedAllStatus}}" type="success_circle" size="20" />
+				<icon wx:else type="circle" size="20" />
+				<text style="padding-left:10rpx;">全选</text>
+		</view>
+		<view style="margin-left:-140rpx;">
+				<view>
+						共计：
+						<span style="color:red">￥{{totalMoney}}</span>
+				</view>
+				<view style="font-size:30rpx;color:gray;">商品数量：{{totalNumber}}</view>
+		</view>
+		<view class="button" catchtap="submitOrder" catchtap="bindCheckout" data-id="{{id}}">立即购买</view>
+</view>

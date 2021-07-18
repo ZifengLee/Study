@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    padding-left: 30%;
+    width: 500px;
+}
+
+.h2Title {
+    text-align: center;
+}
+
+#app h3 {
+    color: red;
+}
+
+.buttons {
+    margin-bottom: 1rem;
+}
+
+.main {
+    background-color: bisque;
+    width: 30rem;
+}
+
+.restart,
+.regret,
+.undo {
+    background: bisque;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#chess {
+    position: relative;
+    width: 440px;
+    height: 450px;
+    padding-left: 30px;
+    padding-top: 30px;
+    background-color: bisque;
+}
+
+#chess .squre {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #666;
+    float: left;
+}
+
+#box01 .squre:hover {
+    background-color: pink;
+}
+
+#box01 {
+    position: absolute;
+    margin: 0 auto;
+    width: 450px;
+    height: 450px;
+    top: 15px;
+    left: 15px;
+}
+
+#box01 .qz {
+    /* width: 28px;
+height: 28px; */
+    width: 30px;
+    height: 30px;
+    border: 0px solid #c7c7c7;
+    float: left;
+    border-radius: 50%;
+    /* margin: 1px; */
+}
+
+#box01 .qz:hover {
+    background-color: pink;
+}
+
+.toggle {
+    float: right;
+}

@@ -1,0 +1,166 @@
+page {
+    background-color: #f2f2f2;
+    padding: 0rpx;
+    margin: 0rpx;
+}
+
+.stores_detail {
+    padding: 20rpx 0rpx;
+    background-color: #039bff;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 360rpx;
+}
+
+.fs30 {
+    font-size: 30rpx;
+    padding-bottom: 20rpx;
+}
+
+.fs40 {
+    font-size: 44rpx;
+    padding-bottom: 20rpx;
+}
+
+.disp1 {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.disp {
+    display: flex;
+    text-align: center;
+}
+
+.jce {
+    justify-content: flex-end;
+}
+
+.w50 {
+    width: 50%;
+}
+
+.rule {
+    width: 150rpx;
+    height: 30rpx;
+    background-color: #025f9c;
+    text-align: end;
+    border-top-left-radius: 6em;
+    border-bottom-left-radius: 6em;
+    padding-right: 10rpx;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 10rpx;
+}
+
+#scroll {
+    overflow: hidden;
+    background-color: white;
+    width: 100%;
+    margin-top: 450rpx;
+    height: 100%;
+}
+
+.duizhang {
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 400rpx;
+    height: 60rpx;
+    padding: 14rpx 30rpx;
+}
+
+.main-dui {
+    width: 92%;
+    margin: 16rpx auto;
+    font-size: 14px;
+}
+
+.qian {
+    font-size: 33rpx;
+}
+
+.title {
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    font-size: 39rpx;
+    border-bottom: 1rpx solid gray;
+}
+
+.kuai {
+    margin-top: 18rpx;
+    border-bottom: 1rpx solid gray;
+}
+
+.top-kuai {
+    padding: 20rpx;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10rpx;
+}
+
+.min-kuai {
+    color: #a2a2a2;
+    margin-top: 4rpx;
+    text-align: right;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    padding-bottom: 14rpx;
+}
+
+.bot-kuai {
+    background-color: #eaeaea;
+    margin-top: 4rpx;
+    padding: 20rpx;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    color: brown;
+}
+
+.submit {
+    height: 90rpx;
+}
+
+.submit button {
+    width: 260rpx;
+    font-weight: 100;
+    border-radius: 35rpx;
+    justify-content: space-between;
+    line-height: 70rpx;
+}
+
+/* 设置遮罩层样式 */
+.mask {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    background: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.bgc {
+    width: 80%;
+    height: 410rpx;
+    background-color: white;
+    margin: auto;
+    margin-top: 280rpx;
+    border-radius: 20rpx;
+}
+
+.center {
+    text-align: center;
+    padding-top: 12rpx;
+}
+
+.mask .image {
+    width: 100rpx;
+    height: 100rpx;
+    margin: auto;
+}

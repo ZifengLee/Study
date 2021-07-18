@@ -1,0 +1,189 @@
+.content {
+    padding: 20rpx;
+    background: rgba(248, 248, 248);
+}
+
+
+/* 订单状态 */
+.currency {
+    padding: 20rpx;
+    font-size: 26rpx;
+    margin-bottom: 20rpx;
+    border-radius: 10rpx;
+    background: white;
+}
+
+.currency:last-child {
+    margin: 0;
+}
+
+.order_status>view {
+    margin: 20rpx 0;
+    text-align: center;
+}
+
+.status_btn {
+    padding: 8rpx 20rpx;
+    margin: 0 auto;
+    width: 50%;
+    border-radius: 30rpx;
+    background-color: #ff0000;
+    color: #fff;
+    line-height: 45rpx;
+}
+
+/* 订单中的商品信息 */
+.title {
+    border-bottom: 1rpx solid #C3C3C3;
+    line-height: 80rpx;
+    font-size: 30rpx;
+    margin-bottom: 15rpx;
+}
+
+.person {
+    display: flex;
+    align-items: center;
+    line-height: 60rpx;
+}
+
+.call {
+    border-top: 1rpx solid #C3C3C3;
+    margin-top: 20rpx;
+    justify-content: center;
+    padding-top: 10rpx;
+}
+
+.person-image {
+    width: 46rpx;
+    height: 46rpx;
+    margin-right: 10rpx;
+}
+
+.goods {
+    font-size: 26rpx;
+}
+
+
+/* 商品信息 */
+.info {
+    padding-bottom: 25rpx;
+    display: flex;
+    border-bottom: 1rpx solid #C3C3C3;
+    margin: 20rpx 20rpx;
+}
+
+.info-image {
+    width: 100rpx;
+    height: 100rpx;
+    margin-right: 20rpx;
+}
+
+.info-guige {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    width: calc(100% - 120rpx);
+}
+
+.info-guige>view {
+    display: flex;
+    justify-content: space-between;
+}
+
+.time {
+    padding-bottom: 20rpx;
+    border-bottom: 2rpx solid #333;
+}
+
+.money {
+    padding: 14rpx 0;
+    color: #000;
+    font-size: 26rpx;
+    border-bottom: 2rpx solid #333;
+}
+
+.moneyg {
+    padding: 6rpx 0;
+}
+
+.goods-all {
+    padding: 20rpx 0;
+    border-bottom: 2rpx solid #333;
+    color: red;
+}
+
+.goods-have {
+    padding: 6rpx 0;
+}
+
+.goods-real {
+    margin: 30rpx 20rpx;
+    display: flex;
+    justify-content: space-between;
+    font-size: 34rpx;
+}
+
+
+/* 订单信息 */
+.message {
+    display: flex;
+    justify-content: space-between;
+    line-height: 90rpx;
+    margin: 0 12rpx;
+}
+
+.bd {
+    border-bottom: 1rpx solid #CFCFCF;
+}
+
+/* 设置遮罩层样式 */
+#mask {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    background: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+#bgc {
+    width: 70%;
+    height: 390rpx;
+    background-color: white;
+    margin: auto;
+    margin-top: 400rpx;
+    border-radius: 20rpx;
+    position: relative;
+}
+
+#maskCenter {
+    text-align: center;
+    padding-top: 30rpx;
+    font-size: 15px;
+    padding-bottom: 8px;
+    border-bottom: 0.5px solid black;
+}
+
+#center {
+    text-align: center;
+    line-height: 180rpx;
+}
+
+#button {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    line-height: 100rpx;
+    border-top: 1rpx solid black;
+}
+
+#button view:first-child {
+    border-right: 1rpx solid black;
+}
+
+#button view {
+    width: 50%;
+    text-align: center;
+}

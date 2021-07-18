@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>简易五子棋</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+  <link rel="stylesheet" href="./goBang.css">
+</head>
+
+<body>
+  <div id="app">
+    <h2 class="h2Title">--欢迎来到--</h2>
+    <h2 class="h2Title">--欢乐五子棋！--</h2>
+    <h3 class="h2Title">{{victory}}</h3>
+    <div class="buttons">
+      <input type="button" value="重新开始" class="restart" @click="restartInit()" />
+      <input type="button" value="悔棋" class="regret" @click="regret()" />
+      <input type="button" value="撤销悔棋" class="undo" @click="undo()" />
+      <input type="button" :value="toggle?'切换dom':'切换canvas'" class="toggle" @click="toggleF()" />
+    </div>
+    <div class="main">
+      <canvas v-show="toggle" id="myCanvas" ref="canvas" width="480" height="480">当前浏览器不支持Canvas</canvas>
+      <div v-show="!toggle" id="chess" ref="chessBox">
+        <!-- <div id="box01"></div>
+        <div id="box02"></div> -->
+      </div>
+    </div>
+  </div>
+  <script src="./goBang.js"></script>
+</body>
+
+</html>

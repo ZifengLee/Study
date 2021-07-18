@@ -1,0 +1,53 @@
+<view class="search">
+		<image class="search_img" src="../../images/search.png" />
+		<input class="search_input" focus value="{{name}}" placeholder="请输入商品名称" bindinput='getname' bindconfirm="itmeSearch"></input>
+		<view catchtap="itmeSearch" style="color:white;margin-right:20rpx;">搜索</view>
+</view>
+<view wx:if="{{goodsList.length === 0}}">
+		<view class="hot">
+				<view class="hot_title">
+						<image class="_img" src="../../images/search/u257.png"></image>
+						<text>热门推荐</text>
+				</view>
+				<view class="hot_content">
+						<view wx:for="{{hotList}}" wx:key="index" class="hot_item" bindtap="itmeSearch" data-name="{{item.name}}">
+								{{item.name}}
+						</view>
+				</view>
+		</view>
+		<view class="history">
+				<view class="history_title">
+						<view class="_title">
+								<image class="_img" src="../../images/search/u253.png"></image>
+								<text>历史记录</text>
+						</view>
+						<view class="_title">
+								<image class="_img" src="../../images/search/u252.svg"></image>
+								<text>删除历史记录</text>
+						</view>
+				</view>
+				<view class="history_content">
+						<view class="history_item" wx:for="{{hotList}}" wx:key="index" bindtap="itmeSearch" data-name="{{item.name}}">
+								{{item.name}}
+						</view>
+				</view>
+		</view>
+</view>
+<view class="goods_content" wx:else>
+		<view class="goods" wx:for="{{goodsList}}" wx:key="key">
+				<image bindtap="detail" data-id="{{item.id}}" class="goods_img" src="{{ imgBaseUrl + item.image }}"></image>
+				<view bindtap="detail" data-id="{{item.id}}" class="goods_title">{{item.name}}</view>
+				<view class="goods_price">
+						<view class="price_content">
+								<view>
+										￥
+										<text class="price_new">{{item.actual_price}}</text>
+								</view>
+								<view class="price_old">￥{{item.bid_price}}</view>
+						</view>
+						<button type="warn" size="mini" class="goods_btn" bindtap="detail" data-id="{{item.id}}">
+								查看详情
+						</button>
+				</view>
+		</view>
+</view>

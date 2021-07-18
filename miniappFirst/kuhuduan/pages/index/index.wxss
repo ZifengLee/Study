@@ -1,0 +1,337 @@
+/* 店面卡片区域 */
+#merchant {
+    display: flex;
+    justify-content: space-between;
+    padding: 30rpx;
+    width: calc(100%-30rpx);
+    padding-right: 0rpx;
+}
+
+#message {
+    display: flex;
+    width: 80%;
+    padding-right: 10rpx;
+}
+
+#merchantImage {
+    width: 95rpx;
+    height: 95rpx;
+    border-radius: 50%;
+}
+
+#merchantCenter {
+    margin-left: 20rpx;
+}
+
+#merchantName {
+    font-size: 36rpx;
+    font-weight: bold;
+}
+
+#merchantAddress {
+    font-size: 30rpx;
+    color: gray;
+}
+
+#vipContent {
+    border-left: 2rpx solid gray;
+    padding-left: 10rpx;
+    padding-right: 10rpx;
+    width: 20%;
+}
+
+#vipContent > view {
+    text-align: center;
+}
+
+#vipNumber {
+    color: red;
+    font-size: 40rpx;
+    font-weight: bold;
+}
+
+#vip {
+    font-size: 30rpx;
+    color: gray;
+}
+
+/* 活动专区 */
+#activeItem {
+    margin: 8rpx 0rpx;
+}
+
+#activeImage {
+    width: 100%;
+    height: 160rpx;
+}
+
+/* 抽奖 */
+#lottery {
+    position: relative;
+    width: 100%;
+    height: 1240rpx;
+}
+
+#bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* 中奖轮播 */
+#swiper {
+    position: absolute;
+    top: 315rpx;
+    width: 490rpx;
+    height: 60rpx;
+    margin: 0 calc((100% - 490rpx) / 2);
+    border-radius: 30rpx;
+    background-color: rgba(53, 53, 53, 0.3);
+    box-shadow: 3rpx 5rpx 6rpx rgba(0, 0, 0, 0.288);
+    font-size: 30rpx;
+    color: #ffebeb;
+}
+
+#swiperContent {
+    /* 轮播开启自动滑动后禁止手动滑动 */
+    pointer-events: none;
+    padding-top: 10rpx;
+    height: 70%;
+}
+
+#centerConent {
+    position: absolute;
+    top: 400rpx;
+    display: flex;
+    justify-content: space-between;
+    width: 92%;
+    margin: 0 calc((100% - 92%) / 2);
+    font-size: 32rpx;
+    color: white;
+}
+
+/* 中间转盘 */
+#trans {
+    position: absolute;
+    top: 460rpx;
+    width: 620rpx;
+    height: 620rpx;
+    margin: 0 calc((100% - 620rpx) / 2);
+}
+
+#rotate {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#rotateBg,
+#transContent {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.contentItem {
+    position: absolute;
+    left: calc((100% - 150rpx) / 2);
+    width: 150rpx;
+    height: calc(100% - 90rpx);
+    text-align: center;
+    padding-top: 90rpx;
+}
+
+#transContent0 {
+    opacity: 1;
+}
+
+.contentItem > view {
+    font-size: 26rpx;
+}
+
+.contentItem > image {
+    width: 60rpx;
+    height: 60rpx;
+    margin-top: 10rpx;
+}
+
+#fixed {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#arrow {
+    position: absolute;
+    left: calc((100% - 120rpx) / 2);
+    width: 120rpx;
+    height: 90rpx;
+}
+
+#center {
+    position: absolute;
+    top: calc((100% - 90rpx) / 2);
+    left: calc((100% - 90rpx) / 2);
+    width: 90rpx;
+    height: 90rpx;
+    color: #89490f;
+    font-size: 35rpx;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* 抽奖规则 */
+#rule {
+    position: absolute;
+    top: 1105rpx;
+    height: 60rpx;
+    background-color: #ff9d03;
+    border-bottom-right-radius: 40rpx;
+    border-top-right-radius: 40rpx;
+    width: 180rpx;
+    text-align: center;
+    padding-top: 10rpx;
+    font-size: 36rpx;
+    color: #89490f;
+}
+
+#ruleShadow {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    padding: 180rpx 90rpx;
+    /* overflow: hidden; */
+}
+
+#ruleContent {
+    background-color: #fff;
+    color: #f97d1f;
+    border-radius: 20rpx;
+    width: 100%;
+    position: relative;
+    padding-top: 40rpx;
+    height: 450rpx;
+}
+
+#ruleTitle {
+    position: absolute;
+    top: -60rpx;
+    text-align: center;
+    background-color: #f97d1f;
+    font-size: 36rpx;
+    color: #fff;
+    border-radius: 40rpx;
+    padding: 20rpx 40rpx;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#ruleTest {
+    text-indent: 0.8rem;
+    padding: 10rpx 20rpx;
+    font-size: 32rpx;
+    overflow: hidden;
+    height: 370rpx;
+    width: calc(100% - 20rpx);
+}
+
+#btnContain {
+    width: 100%;
+    position: absolute;
+    bottom: 5rpx;
+}
+
+#btn {
+    text-align: center;
+    border-radius: 50%;
+    border: 2rpx solid #999;
+    color: #999;
+    font-size: 30rpx;
+    width: 60rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    margin: 0 auto;
+}
+
+/* 商品列表*/
+#scroll {
+    height: 1180rpx;
+}
+
+.goods_content {
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+    display: flex;
+    margin-top: 140rpx;
+    flex-wrap: wrap;
+}
+
+.goods {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 8rpx 1%;
+}
+
+.goods_img {
+    width: 100%;
+    height: 460rpx;
+}
+
+.goods_title {
+    width: 95%;
+    font-size: 30rpx;
+    padding: 10rpx 0;
+}
+
+.goods_price {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: red;
+}
+
+.price_content {
+    margin: 0 0 0 10rpx;
+    display: flex;
+    align-items: baseline;
+}
+
+.price_new {
+    font-size: 40rpx;
+}
+
+.price_actually {
+    font-size: 30rpx;
+}
+
+.price_old {
+    font-size: 24rpx;
+    color: rgb(187, 187, 187);
+    text-decoration: line-through;
+    margin-left: 18rpx;
+}
+
+.goods_btn {
+    margin: 0 4rpx 6rpx 0;
+    width: 40%;
+    font-size: 20rpx !important;
+    border-radius: 26rpx;
+}
+
+.noting {
+    width: 100%;
+    margin-top: 150rpx;
+}

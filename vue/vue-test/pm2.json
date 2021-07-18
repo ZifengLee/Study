@@ -1,0 +1,15 @@
+{
+  "apps":[
+    {
+      "name": "s",
+      "cwd": "./",
+      "script": "./pm2bat.bat",
+      "exec_interpreter": "cmd",
+      "exec_mode": "fork_mode",
+      "error_file": "./err.log",
+      "out_file": "./out.log",
+      "pid_file": "./s.pid",
+      "watch": false
+    }
+  ]
+}

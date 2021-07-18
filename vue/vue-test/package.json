@@ -11,7 +11,11 @@
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "pm2:start": "pm2 start pm2.json",
+    "pm2:restart": "pm2 restart s",
+    "pm2:stop": "pm2 stop s",
+    "pm2:delete": "pm2 delete s"
   },
   "dependencies": {
     "node-sass": "^4.14.1",

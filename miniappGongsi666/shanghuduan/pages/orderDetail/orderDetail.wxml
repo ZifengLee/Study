@@ -1,0 +1,50 @@
+<view class="main">
+	<view class="contain">
+		<view class="border disf jcsb pt10 pb10">
+			<view class="disf">
+				<view>编号：</view>
+				<view class="num">{{index}}</view>
+			</view>
+			<view class="cred">{{orderDetail.flag}}</view>
+		</view>
+		<view class="border pt10 pb10">用户名称：{{orderDetail.name}}</view>
+		<view class="border pt10 pb10">用户电话：{{orderDetail.mobile_phone}}</view>
+		<view class="border pt10 pb10">订单编号：{{orderDetail.code}}</view>
+		<view class="pt10">下单时间：{{orderDetail.create_time}}</view>
+	</view>
+	<view class="contain">
+		<view class="border pt10 pb10">商品明细</view>
+		<view class="border pt10 pb10 disf" wx:for="{{goodsList}}" wx:key="id">
+			<image src="{{item.image}}" />
+			<view style=" padding-left: 20rpx;">
+				<view>{{item.name}}</view>
+				<view class="disf jcsb" style="width: 500rpx;">
+					<view class="cred" style=" font-size: 30rpx;padding-top: 30rpx;">
+						￥{{item.actual_price}}
+					</view>
+					<view>x{{item.number}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="contain" wx:if="{{orderDetail.remark!==null}}">
+		<view class="pt10">订单备注：</view>
+		<view class="pt10 pb10">{{orderDetail.remark}}</view>
+	</view>
+</view>
+<view class="submit" wx:if="{{orderDetail.flag!=='已完成'}}">
+	<!-- <button bindtap="goToConfirm" style=" background-color: #039BFF; color: white;">确认自提</button> -->
+	<button catchtap='showMask' style=" background-color: #039BFF; color: white;">确认自提</button>
+</view>
+
+<!-- 确认自提遮罩层 -->
+<view id="mask" hidden="{{flag}}">
+	<view id="bgc">
+		<view id="maskCenter">温馨提示</view>
+		<view id="center">是否确认此订单客户自提成功！</view>
+		<view id="button">
+			<view catchtap="closeMask">取消</view>
+			<view catchtap="goToConfirm">确认</view>
+		</view>
+	</view>
+</view>

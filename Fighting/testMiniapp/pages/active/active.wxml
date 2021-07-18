@@ -1,0 +1,14 @@
+<view class='box'>
+    <scroll-view scroll-y scroll-with-animation style="width:25%">
+        <view class='nav'>
+            <view wx:for="{{navList}}" wx:key='index' class="title {{index == active ?'select':''}}"
+                data-index='{{index}}' bindtap='activeNav'>{{item}}</view>
+        </view>
+    </scroll-view>
+    <scroll-view scroll-y style="width:75%" scroll-with-animation scroll-into-view="{{selectId}}"
+        bindscroll="watchScroll">
+        <view class='content'>
+            <view id='{{"item"+index}}' class='subtitle' wx:for="{{navList}}" wx:key='index'>{{item}}</view>
+        </view>
+    </scroll-view>
+</view>

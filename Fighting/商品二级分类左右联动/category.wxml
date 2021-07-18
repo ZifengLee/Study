@@ -1,0 +1,63 @@
+<!-- 搜索 -->
+<view class="search">
+	<view class="search-box" bindtap="searchGoodsName">请输入商品名称</view>
+	<image src="../../images/search.png" class='question-mark'></image>
+</view>
+<!-- 左侧导航 -->
+<view class='tui-fixed-left'>
+	<scroll-view class='tui-city-scroll' scroll-x="true" scroll-y="true" style='height:92%;' scroll-with-animation="true" scroll-top="{{leftMenuTop}}">
+		<span class="menu-item {{index === currentActiveIndex ? 'menu-active' : ''}}" wx:for="{{goodsList}}" wx:key="index" data-index="{{index}}" id='{{index}}' catchtap='changeMenu'>
+			{{item.name}}
+		</span>
+	</scroll-view>
+</view>
+<!-- 右侧滚动商品 -->
+<view class='content'>
+	<scroll-view lower-threshold="0" refresher-enabled refresher-triggered="{{refresher}}" bindrefresherrefresh="refresherrefresh" class='tui-city-scroll-y' scroll-y style='height:92%;' scroll-with-animation scroll-top="{{rightProTop}}" bindscroll="scroll">
+		<view id="pro-item" class="pro-item" wx:for="{{goodsList}}" wx:key="index">
+			<view class='tui-list-head' id='NAV{{index}}'>{{item.name}}</view>
+			<!-- 商品图片 -->
+			<view class="allShop" wx:for-item='items' wx:for="{{item.list}}" wx:key="index">
+				<view class="img_box" bindtap="goToGoodsDetail" data-item="{{items}}">
+					<!-- 中部商品图 -->
+					<view class="center_img">
+						<image lazy-load style="width: 100%;height: 454rpx;" src="{{imgbaseUrl+items.image}}"></image>
+					</view>
+				</view>
+				<!-- 商品详情 -->
+				<view class="shop">
+					<!-- 商品名称和规格 -->
+					<view class="shop_name">
+						<view class="goods_name">{{items.name}}</view>
+						<view class="goods_size">
+							<view class="pre_buy">
+								<view class="buy_sum">
+									规格：
+									<text>{{items.specification}}</text>
+								</view>
+							</view>
+							<view class="get_goods">
+								<view class="pre_goods_num">
+									每份含：<text>{{items.weight}}</text>g
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<!-- 显示价钱和购物车 -->
+				<view class="purchase">
+					<view class="goods_price">
+						<view class="dollar">
+							￥
+							<text>{{items.price}}</text>
+						</view>
+					</view>
+					<view class="goods_car" bindtap="openAttributes" data-item="{{items}}">
+						<text>加入购物车</text>
+					</view>
+				</view>
+			</view>
+		</view>
+	</scroll-view>
+</view>
+<cartBox cartBox="{{cartBox}}" goodsoattributes="{{goodsoattributes}}" danguige="{{danguige}}" duoguige="{{duoguige}}" guigelist="{{guigelist}}" goodsNumber="{{goodsNumber}}" imageBaseUrl="{{imgbaseUrl}}"></cartBox> 

@@ -1,0 +1,16 @@
+<view style="height:100%;">
+	<view id="scroll">
+		<view class="jifen_item" wx:for="{{list}}" wx:key="key">
+			<view>
+				<text>{{item.type}}</text>
+				<text>{{item.create_time}}</text>
+			</view>
+			<text>{{item.money > 0 ? "+" + item.money : item.money}}</text>
+		</view>
+	</view>
+	<view class="jifen">
+		<image src="../../images/redbg.png"></image>
+		<text>{{allMoney}}</text>
+		<text>现金券总数</text>
+	</view>
+</view>

@@ -1,0 +1,69 @@
+<view class="main">
+		<view>
+				<view class="box">
+						<!-- 收货地址 -->
+						<view>
+								<view class="address-detail" bindtap="goToSite">
+										<image class="address-person-image" src="../../images/dizhi.png" />
+										<view style="width:620rpx;font-size: 36rpx;">
+												<input class="address-person-input" disabled value="{{merchantInfo.address}}" />
+										</view>
+								</view>
+								<!-- 发货人信息 -->
+								<view class="address-person">
+										<view class="shangjia">
+												<view class="col9">门店电话</view>
+												<input class="address-person-input" maxlength="11" disabled value="{{merchantInfo.mobile_phone}}" />
+										</view>
+										<view style="margin-right: 20rpx;text-align: center;" catchtap="changeCustomerInfoMobilePhone">
+												<view class="col9">取货电话</view>
+												<input class="address-person-input" maxlength="11" type="number" placeholder="填写您电话" value="{{mobile_phone}}" />
+										</view>
+										<image class="address-person-image1" src="../../images/bianji.png" catchtap="changeCustomerInfoMobilePhone" />
+								</view>
+						</view>
+				</view>
+		</view>
+		<!-- 商品信息 -->
+		<view class="box">
+				<view class="info storeName">{{merchantInfo.merchant_name}}</view>
+				<view class="info" wx:for="{{orderInfo.list}}" wx:key="index">
+						<view class="info-image">
+								<image style="width: 100%;height: 100%" src="{{imgBaseUrl + item.image }}" />
+						</view>
+						<view class="info-guige">
+								<view>
+										<text>{{item.name}}</text>
+										<text>×{{item.number}}</text>
+								</view>
+								<view>
+										<text>￥{{item.price}}</text>
+								</view>
+						</view>
+				</view>
+				<view class="money">
+						<view class="goods-total moneyg">
+								<view>共计{{orderInfo.list.length}}件商品</view>
+								<view>
+										应付金额：
+										<span style="color:red;font-size: 36rpx;">￥{{orderInfo.payAmount}}</span>
+								</view>
+						</view>
+				</view>
+		</view>
+		<!-- 备注 -->
+		<view class="box">
+				<textarea placeholder="备注" adjust-position bindinput="changeRemark"></textarea>
+		</view>
+</view>
+<!-- 底部吸低按钮 -->
+<view class="submit">
+		<view style="margin-left: 20rpx;">
+				合计：
+				<text>￥{{orderInfo.actuallyAmount}}</text>
+		</view>
+		<view style="width:240rpx;height: 100%;">
+				<button bindtap="payOrder">提交订单</button>
+		</view>
+</view>
+<showModel id="showModal" bindshowModalSuccess="bindshowModalSuccess" showModal="{{showModal}}"></showModel>

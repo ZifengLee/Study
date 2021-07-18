@@ -1,0 +1,19 @@
+<view style="font-size: 34rpx;">
+		<view style="margin-left: 40rpx;margin-top: 40rpx;">{{merchantName}}</view>
+		<view class="integra1_detail">
+				<input style="text-align: right;margin-right: 40rpx;" placeholder="请输入支付现金券数量" bindinput="setInput" value="{{inputValue}}" type="digit"></input>
+		</view>
+		<view style="margin-left: 40rpx;">现有现金券：{{cashCoupons}}</view>
+		<view class="submit">
+				<view class="btn" bindtap='showMask'>确认支付</view>
+		</view>
+</view>
+<!-- 遮罩层 -->
+<view class="mask" hidden="{{flag}}" style="width:100%;height:100%;">
+		<view class="tishiContant">
+				<view class="queding_img">
+						<image src='../../images/success.png' />
+				</view>
+				<view class="tishiType">支付成功</view>
+		</view>
+</view>
